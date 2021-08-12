@@ -1,0 +1,29 @@
+$main: #fff;
+
+%applegaramond-400{
+  font-family: 'AppleGaramond-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%century-400{
+  font-family: 'Century-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%mallanna-400{
+  font-family: 'Mallanna-Regular', sans-serif;
+  font-weight: 400;
+}
+
+
+
+
+
+
+
+@function max($numbers...) {
+ @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+ @return m#{i}n(#{$numbers});
+}

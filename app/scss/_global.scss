@@ -1,0 +1,36 @@
+html,
+body {
+	height: 100%;
+}
+
+body{
+  font-size: 18px;
+  line-height: 33px;
+  color: $main;
+  @extend %mallanna-400;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.container{
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-fluid{
+  max-width: 1920px;
+  padding: 0 15px;
+  margin: 0 auto;
+}

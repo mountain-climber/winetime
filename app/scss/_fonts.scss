@@ -1,0 +1,29 @@
+@font-face{
+  font-family: 'AppleGaramond-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local('AppleGaramond-Regular'),
+       url('../fonts/AppleGaramond-Regular.woff2') format('woff2'),
+       url('../fonts/AppleGaramond-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Century-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Century-Regular'),
+       url('../fonts/Century-Regular.woff2') format('woff2'),
+       url('../fonts/Century-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Mallanna-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Mallanna-Regular'),
+       url('../fonts/Mallanna-Regular.woff2') format('woff2'),
+       url('../fonts/Mallanna-Regular.woff') format('woff');
+  font-display: swap;
+}
