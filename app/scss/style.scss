@@ -60,11 +60,130 @@
     display: flex;
   }
   &__list-item{
-    font-size: 14px;
+    font-size: 16px;
     line-height: 26px;
     margin-right: 25px;
     &:last-child{
       margin-right: 0;
+    }
+  }
+}
+
+.promo{
+  padding-top: 100px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__content{
+    max-width: 336px;
+  }
+  &__title{
+    margin-bottom: 36px;
+  }
+  &__subtitle{
+    color: $accent;
+    font-size: 24px;
+    line-height: 44px;
+    margin-bottom: 30px;
+  }
+  &__info{
+    max-width: 325px;
+    span{
+      display: block;
+    }
+  }
+  &__clock-wrapper{
+    max-width: 530px;
+    width: 100%
+  }
+  &__price{
+    font-size: 36px;
+    line-height: 67px;
+    display: flex;
+    margin-bottom: 77px;
+  }
+  &__price-old{
+    color: #B3A7A7;
+    padding-right: 50px;
+    margin-right: 30px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 3px;
+      background-color: $accent;
+      top: 32px;
+      left: 8px;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 1px;
+      background-color: $accent;
+      right: 0;
+      top: 50%;
+    }
+  }
+  &__price-new{
+    color: $accent;
+  }
+  &__clock-title{
+    font-size: 30px;
+    line-height: 55px;
+    margin-bottom: 30px;
+  }
+  &__clock{
+    display: flex;
+    margin-bottom: 45px;
+  }
+  &__clock-item{
+    padding-right: 55px;
+    margin-right: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 88px;
+      background-color: rgba(#EDD3AE, .38);
+      top: 28px;
+      right: 0;
+    }
+    &:last-child{
+      padding-right: 0;
+      margin-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__time{
+    font-size: 48px;
+    line-height: 90px;
+  }
+  &__text{
+    font-size: 30px;
+    line-height: 44px;
+    color: $accent;
+  }
+  &__link{
+    border-bottom: 1px solid #FCEDD6;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: -3px;
+      right: -48px;
+      background-image: url('../images/angle-right.svg');
     }
   }
 }

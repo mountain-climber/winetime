@@ -29,3 +29,9 @@ body{
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.title{
+  font-size: 36px;
+  line-height: 36px;
+  @extend %applegaramond-400;
+}
