@@ -70,7 +70,7 @@ $(function () {
         case 31:
         case 41:
         case 51:
-          correctHours = "ЧАС";
+          correctHours = "Час";
           // console.log(total.hours, correctHours); // DEBUG
           break;
         case 2:
@@ -88,11 +88,11 @@ $(function () {
         case 52:
         case 53:
         case 54:
-          correctHours = "ЧАСА";
+          correctHours = "Часа";
           // console.log(total.hours, correctHours); // DEBUG
           break;
         default:
-          correctHours = "ЧАСОВ";
+          correctHours = "Часов";
         // console.log(total.hours, correctHours); // DEBUG
       }
       document.querySelector('.promo__hours-text').textContent = correctHours;
@@ -104,7 +104,7 @@ $(function () {
         case 31:
         case 41:
         case 51:
-          correctMinutes = "МИНУТА";
+          correctMinutes = "Минута";
           // console.log(total.minutes, correctMinutes); // DEBUG
           break;
         case 2:
@@ -122,11 +122,11 @@ $(function () {
         case 52:
         case 53:
         case 54:
-          correctMinutes = "МИНУТЫ";
+          correctMinutes = "Минуты";
           // console.log(total.minutes, correctMinutes); // DEBUG
           break;
         default:
-          correctMinutes = "МИНУТ";
+          correctMinutes = "Минут";
         // console.log(total.minutes, correctMinutes); // DEBUG
       }
       document.querySelector('.promo__minutes-text').textContent = correctMinutes;
@@ -138,7 +138,7 @@ $(function () {
         case 31:
         case 41:
         case 51:
-          correctSeconds = "СЕКУНДА";
+          correctSeconds = "Секунда";
           // console.log(total.seconds, correctSeconds); // DEBUG
           break;
         case 2:
@@ -156,11 +156,11 @@ $(function () {
         case 52:
         case 53:
         case 54:
-          correctSeconds = "СЕКУНДЫ";
+          correctSeconds = "Секунды";
           // console.log(total.seconds, correctSeconds); // DEBUG
           break;
         default:
-          correctSeconds = "СЕКУНД";
+          correctSeconds = "Секунд";
         // console.log(total.seconds, correctSeconds); // DEBUG
       }
       document.querySelector('.promo__seconds-text').textContent = correctSeconds;
