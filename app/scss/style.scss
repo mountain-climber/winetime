@@ -140,7 +140,7 @@
     }
   }
   &__clock-wrapper{
-    max-width: 500px;
+    max-width: 530px;
     width: 100%
   }
   &__price{
@@ -219,6 +219,10 @@
     line-height: 44px;
     color: $accent;
   }
+  &__seconds-text{
+    width: 125px;
+    text-align: center;
+  }
   &__link{
     border-bottom: 1px solid #FCEDD6;
     position: relative;
@@ -231,6 +235,108 @@
       right: -48px;
       background-image: url('../images/angle-right.svg');
     }
+  }
+}
+
+.popular{
+  padding-top: 110px;
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+  &__link{
+    font-size: 24px;
+    line-height: 44px;
+    border-bottom: 1px solid #F3CE96;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.discount{
+  padding: 60px 0 100px;
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+  &__link{
+    font-size: 24px;
+    line-height: 44px;
+    border-bottom: 1px solid #F3CE96;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.product-item{
+  max-width: 347px;
+  padding: 30px 0 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all .5s;
+  &:hover{
+    background: #1E2325;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+  }
+  &__link{
+    margin-top: auto;
+    margin-bottom: 38px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-image: url('../images/product/info.svg');
+      top: 5px;
+      right: -70px;
+    }
+  }
+  &__title{
+    font-size: 24px;
+    line-height: 40px;
+  }
+  &__info{
+    color: rgba(#fff, 0.7);
+    display: flex;
+  }
+  &__info-name{
+    padding-right: 10px;
+    margin-right: 5px;
+    position: relative;
+    &::after{
+      content: '-';
+      position: absolute;
+      right: 0;
+    }
+  }
+  &__price-box{
+    display: flex;
+    align-items: center;
+  }
+  &__price-title{
+    padding-right: 17px;
+    position: relative;
+    &::after{
+      content: '-';
+      position: absolute;
+      right: 0;
+    }
+  }
+  &__price{
+    margin-left: 11px;
+    color: $accent;
+    font-size: 24px;
+    line-height: 40px;
   }
 }
 

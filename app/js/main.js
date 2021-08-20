@@ -10,8 +10,16 @@ $(function () {
   // ***************************
   // * дата завершения таймера *
   // ***************************
-  const endtime = 'August 20 2021, 00:00';
 
+  var now = new Date().getDate();
+  var day = now + 2;
+  var month = 'August ';
+  var year = ' 2021, 00:00';
+  var futuredate = month + day + year;
+
+  var endtime = futuredate;
+  document.querySelector('.promo__clock').setAttribute('data-time', futuredate);
+  
   // приводим к стандартному виду 03:04:05, вместо 3:4:5
   function makeCorrectDate(uncorrectDate) {
     let correctDate = uncorrectDate;
@@ -36,6 +44,7 @@ $(function () {
       'seconds': seconds
     };
   }
+
 
   // инициализация таймера на самом сайте
   function setTime(id, timesup) {

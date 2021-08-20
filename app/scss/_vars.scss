@@ -8,7 +8,7 @@ $accent: #EABC78;
 }
 
 %century-400{
-  font-family: 'Century-Regular', sans-serif;
+  font-family: 'Century-Regular', serif;
   font-weight: 400;
 }
 
@@ -23,9 +23,4 @@ $accent: #EABC78;
 
 
 
-@function max($numbers...) {
- @return m#{a}x(#{$numbers});
-}
-@function min($numbers...) {
- @return m#{i}n(#{$numbers});
-}
+
