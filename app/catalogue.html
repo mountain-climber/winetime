@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body id="body">
+  <div class="wrapper">
+    <header class="header header-one" style="background-image: url('images/header-bg.png');">
+      <div class="container">
+        <div class="header__top">
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/logo.svg" alt="logo">
+          </a>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">Каталог</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">Главная</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">Блог</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">Отзывы</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">Подарочные наборы</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">Акции</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">Контакты</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">Доставка</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="header__phone" href="tel:+78005002040">
+            8 (800)
+            <span>500 20-40</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__list-item">
+              <a class="breadcrumbs__list-link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__list-item">
+              <a class="breadcrumbs__list-link" href="#">Каталог</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <section class="catalogue">
+        <div class="container">
+          <div class="catalogue__inner">
+            <div class="filter catalogue__filters">
+              <div class="filter-price">
+                <h4 class="filter-price__title">Цена, ₽</h4>
+                <div class="filter-price__box">
+                  <span>От</span>
+                  <span>До</span>
+                </div>
+                <form class="filter-price__form" action="#">
+                  <input class="filter-price__input" type="text" data-min="0" data-max="20000" data-from="1500"
+                    data-to="15000">
+                </form>
+              </div>
+
+              <form class="filter-viewed filter__item" action="#">
+                <label class="filter-viewed__label">
+                  <input class="filter-viewed__input" type="checkbox">
+                  <div class="filter-viewed__checkbox">
+                    Товары по акции
+                  </div>
+                </label>
+              </form>
+
+              <form class="filter-new filter__item" action="#">
+                <label class="filter-new__label">
+                  <input class="filter-new__input" type="checkbox">
+                  <div class="filter-new__checkbox">
+                    Новинки
+                  </div>
+                </label>
+              </form>
+
+              <form class="filter-gift filter__item" action="#">
+                <label class="filter-gift__label">
+                  <input class="filter-gift__input" type="checkbox">
+                  <div class="filter-gift__checkbox">
+                    Подарочные наборы
+                  </div>
+                </label>
+              </form>
+
+              <div class="filter-silent filter__item">
+                <h5 class="filter-silent__title filter__title">Тихие вина</h5>
+                <form class="filter-silent__form" action="#">
+                  <label class="filter-silent__label">
+                    <input class="filter-silent__input" type="checkbox">
+                    <div class="filter-silent__checkbox">Белое</div>
+                  </label>
+                  <label class="filter-silent__label">
+                    <input class="filter-silent__input" type="checkbox">
+                    <div class="filter-silent__checkbox">Красное</div>
+                  </label>
+                  <label class="filter-silent__label">
+                    <input class="filter-silent__input" type="checkbox">
+                    <div class="filter-silent__checkbox">Розовое</div>
+                  </label>
+                </form>
+              </div>
+
+              <div class="filter-sparkling filter__item">
+                <h5 class="filter-sparkling__title filter__title">Игристые вина</h5>
+                <form class="filter-sparkling__form" action="#">
+                  <label class="filter-sparkling__label">
+                    <input class="filter-sparkling__input" type="checkbox">
+                    <div class="filter-sparkling__checkbox">Белое</div>
+                  </label>
+                  <label class="filter-sparkling__label">
+                    <input class="filter-sparkling__input" type="checkbox">
+                    <div class="filter-sparkling__checkbox">Красное</div>
+                  </label>
+                  <label class="filter-sparkling__label">
+                    <input class="filter-sparkling__input" type="checkbox">
+                    <div class="filter-sparkling__checkbox">Розовое</div>
+                  </label>
+                </form>
+              </div>
+
+              <div class="filter-champagne filter__item">
+                <h5 class="filter-champagne__title filter__title">Шампанское</h5>
+                <form class="filter-champagne__form" action="#">
+                  <label class="filter-champagne__label">
+                    <input class="filter-champagne__input" type="checkbox">
+                    <div class="filter-champagne__checkbox">Советское</div>
+                  </label>
+                  <label class="filter-champagne__label">
+                    <input class="filter-champagne__input" type="checkbox">
+                    <div class="filter-champagne__checkbox">Выдержанное</div>
+                  </label>
+                </form>
+              </div>
+
+              <div class="filter-volume filter__item">
+                <h5 class="filter-volume__title filter__title">Объём</h5>
+                <form class="filter-volume__form" action="#">
+                  <label class="filter-volume__label">
+                    <input class="filter-volume__input" type="checkbox">
+                    <div class="filter-volume__checkbox">0,375 л</div>
+                  </label>
+                  <label class="filter-volume__label">
+                    <input class="filter-volume__input" type="checkbox">
+                    <div class="filter-volume__checkbox">0,75 л</div>
+                  </label>
+                  <label class="filter-volume__label">
+                    <input class="filter-volume__input" type="checkbox">
+                    <div class="filter-volume__checkbox">1,5 л</div>
+                  </label>
+                </form>
+              </div>
+
+              <div class="filter-sugar filter__item">
+                <h5 class="filter-sugar__title filter__title">Содержание сахара</h5>
+                <form class="filter-sugar__form" action="#">
+                  <label class="filter-sugar__label">
+                    <input class="filter-sugar__input" type="checkbox">
+                    <div class="filter-sugar__checkbox">Брют</div>
+                  </label>
+                  <label class="filter-sugar__label">
+                    <input class="filter-sugar__input" type="checkbox">
+                    <div class="filter-sugar__checkbox">Сухое</div>
+                  </label>
+                  <label class="filter-sugar__label">
+                    <input class="filter-sugar__input" type="checkbox">
+                    <div class="filter-sugar__checkbox">Полусухое</div>
+                  </label>
+                  <label class="filter-sugar__label">
+                    <input class="filter-sugar__input" type="checkbox">
+                    <div class="filter-sugar__checkbox">Полусладкое</div>
+                  </label>
+                </form>
+              </div>
+
+            </div>
+            <div class="catalogue__content">
+              <div class="catalogue__items">
+                <div class="catalogue-item mix show12 show15 show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show12 show15 show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/2.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show12 show15 show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show12 show15 show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show12 show15 show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show12 show15 show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show12 show15 show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show12 show15 show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show12 show15 show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show12 show15 show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show12 show15 show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show12 show15 show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show15 show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show15 show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show15 show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show18 show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+                <div class="catalogue-item mix show21">
+                  <a class="catalogue-item__link" href="#">
+                    <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+                  </a>
+                  <a class="catalogue-item__title-link" href="#">
+                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  </a>
+                  <div class="catalogue-item__info">
+                    <span class="catalogue-item__info-name">Полусухое</span>
+                    <span class="catalogue-item__info-volume">0,75л</span>
+                  </div>
+                  <div class="catalogue-item__price-box">
+                    <p class="catalogue-item__price-title">Цена</p>
+                    <a class="catalogue-item__price" href="#">1 999 ₽</a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="show-pagination">
+                <select class="select-show">
+                  <option data-filter=".show12" value="#">Показывать по 12</option>
+                  <option data-filter=".show15" value="#">Показывать по 15</option>
+                  <option data-filter=".show18" value="#">Показывать по 18</option>
+                  <option data-filter=".show21" value="#">Показывать по 21</option>
+                </select>
+                <div class="pagination">
+                  <a class="pagination__link pagination__link--active" href="#">1</a>
+                  <a class="pagination__link" href="#">2</a>
+                  <a class="pagination__link" href="#">3</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="viewed">
+        <div class="container">
+          <div class="viewed__top">
+            <h3 class="title viewed__title">Вы смотрели</h3>
+            <a class="viewed__link" href="#">Смотреть все</a>
+          </div>
+          <div class="viewed__items">
+            <div class="catalogue-item">
+              <a class="catalogue-item__link" href="#">
+                <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+              </a>
+              <a class="catalogue-item__title-link" href="#">
+                <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+              </a>
+              <div class="catalogue-item__info">
+                <span class="catalogue-item__info-name">Полусухое</span>
+                <span class="catalogue-item__info-volume">0,75л</span>
+              </div>
+              <div class="catalogue-item__price-box">
+                <p class="catalogue-item__price-title">Цена</p>
+                <a class="catalogue-item__price" href="#">1 999 ₽</a>
+              </div>
+            </div>
+
+            <div class="catalogue-item">
+              <a class="catalogue-item__link" href="#">
+                <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+              </a>
+              <a class="catalogue-item__title-link" href="#">
+                <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+              </a>
+              <div class="catalogue-item__info">
+                <span class="catalogue-item__info-name">Полусухое</span>
+                <span class="catalogue-item__info-volume">0,75л</span>
+              </div>
+              <div class="catalogue-item__price-box">
+                <p class="catalogue-item__price-title">Цена</p>
+                <a class="catalogue-item__price" href="#">1 999 ₽</a>
+              </div>
+            </div>
+
+            <div class="catalogue-item">
+              <a class="catalogue-item__link" href="#">
+                <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+              </a>
+              <a class="catalogue-item__title-link" href="#">
+                <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+              </a>
+              <div class="catalogue-item__info">
+                <span class="catalogue-item__info-name">Полусухое</span>
+                <span class="catalogue-item__info-volume">0,75л</span>
+              </div>
+              <div class="catalogue-item__price-box">
+                <p class="catalogue-item__price-title">Цена</p>
+                <a class="catalogue-item__price" href="#">1 999 ₽</a>
+              </div>
+            </div>
+
+            <div class="catalogue-item">
+              <a class="catalogue-item__link" href="#">
+                <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
+              </a>
+              <a class="catalogue-item__title-link" href="#">
+                <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+              </a>
+              <div class="catalogue-item__info">
+                <span class="catalogue-item__info-name">Полусухое</span>
+                <span class="catalogue-item__info-volume">0,75л</span>
+              </div>
+              <div class="catalogue-item__price-box">
+                <p class="catalogue-item__price-title">Цена</p>
+                <a class="catalogue-item__price" href="#">1 999 ₽</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__top-inner">
+            <h3 class="title footer__title">Карта сайта</h3>
+            <div class="footer__content">
+              <nav class="menu">
+                <ul class="menu__list">
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="#">Каталог</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="#">Главная</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="#">Блог</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="#">Отзывы</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="#">Подарочные наборы</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="#">Акции</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="#">Контакты</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="#">Доставка</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="footer__info">
+                <div class="footer__company">ОАО «Wine time»</div>
+                <div class="footer__address">125080, Россия, г. Москва, ул. Левитана, 5А</div>
+                <div class="footer__phone">
+                  <a class="footer__phone-item" href="tel:+78005002040">тел.: 8 (800) 500 20-40</a>
+                  <a class="footer__phone-item" href="tel:+79612992724">тел.: 8 (961) 299-27-24</a>
+                </div>
+                <a class="footer__email" href="mailto:info@winetime.ru">info@winetime.ru</a>
+              </div>
+            </div>
+          </div>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8970.028666488062!2d37.4944288293343!3d55.80179516161738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5484ce9fc56bf%3A0xbe2b9466a07e9861!2z0YPQuy4g0JvQtdCy0LjRgtCw0L3QsCwg0JzQvtGB0LrQstCwLCAxMjUwODA!5e0!3m2!1sru!2sru!4v1629316644606!5m2!1sru!2sru"
+              style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="footer__copy">
+          © 2021 ОАО «Wine time»
+          УНП 190130976
+          <span>Лицензия № 33540/75, выдана 17 апреля 2004 года Государственным комитетом по стандартизации Российской
+            Федерации.</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

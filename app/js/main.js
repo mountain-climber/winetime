@@ -1,16 +1,56 @@
 $(function () {
 
-  // *******************************************
-  // *                TIMER                    *
-  // *                 JS                      *
-  // *                v1.0                     *
-  // *******************************************
+  $('.filter-price__input').ionRangeSlider({
+    type: "double"
+  });
+
+  $('.filter-silent__title').on('click', function () {
+    $('.filter-silent__form').slideToggle({
+      easing: "linear"
+    });
+    $(this).toggleClass('filter__title--open');
+  });
+
+  $('.filter-sparkling__title').on('click', function () {
+    $('.filter-sparkling__form').slideToggle({
+      easing: "linear"
+    });
+    $(this).toggleClass('filter__title--open');
+  });
+
+  $('.filter-champagne__title').on('click', function () {
+    $('.filter-champagne__form').slideToggle({
+      easing: "linear"
+    });
+    $(this).toggleClass('filter__title--open');
+  });
+
+  $('.filter-volume__title').on('click', function () {
+    $('.filter-volume__form').slideToggle({
+      easing: "linear"
+    });
+    $(this).toggleClass('filter__title--open');
+  });
+
+  $('.filter-sugar__title').on('click', function () {
+    $('.filter-sugar__form').slideToggle({
+      easing: "linear"
+    });
+    $(this).toggleClass('filter__title--open');
+  });
+
+  $('.select-show').styler();
+
+  var mixer = mixitup('.catalogue__items',{
+    load:{
+      filter: '.show12'
+    }
+  });
 
 
-  // ***************************
-  // * дата завершения таймера *
-  // ***************************
 
+  // begin of timer
+  
   var now = new Date().getDate();
   var day = now + 2;
   var month = 'August ';
@@ -176,5 +216,7 @@ $(function () {
     }
   }
   setTime('timer', endtime);
+
+  // the timer's end
 
 });

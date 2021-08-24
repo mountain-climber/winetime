@@ -1,6 +1,7 @@
 $main: #fff;
 $bg: #1B2023;
 $accent: #EABC78;
+$catalogue: #0054ff;
 
 %applegaramond-400{
   font-family: 'AppleGaramond-Regular', sans-serif;
@@ -15,6 +16,21 @@ $accent: #EABC78;
 %mallanna-400{
   font-family: 'Mallanna-Regular', sans-serif;
   font-weight: 400;
+}
+
+%checkbox-hidden,
+%radio-hidden{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+%checkbox{
+  color: $accent;
+  background-color: #3c3c39;
+  box-shadow: 0px 5px 30px #fff;
 }
 
 
