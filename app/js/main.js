@@ -39,16 +39,25 @@ $(function () {
     $(this).toggleClass('filter__title--open');
   });
 
-  $('.select-show').styler();
+  $('.select-show, .product__form-input').styler();
 
-  var mixer = mixitup('.catalogue__items',{
-    load:{
-      filter: '.show12'
-    }
+  $('.select-show').on('click', function () {
+    $('.jq-selectbox__dropdown').toggleClass('jq-selectbox__dropdown--open');
   });
 
+  $('.select-show').on('click', function () {
+    $('.jq-selectbox__trigger-arrow').toggleClass('jq-selectbox__trigger-arrow--open');
+  });
 
+  $(".star").rateYo({
+    starWidth: "30px",
+    normalFill: "transparent",
+    ratedFill: "#EABC78",
+    readOnly: true,
+    starSvg: '<svg width="30px" height="30px" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 1.61804L17.8922 10.5193L18.0044 10.8647H18.3677H27.727L20.1552 16.366L19.8613 16.5795L19.9735 16.925L22.8657 25.8262L15.2939 20.325L15 20.1115L14.7061 20.325L7.13428 25.8262L10.0265 16.925L10.1387 16.5795L9.84482 16.366L2.27299 10.8647H11.6323H11.9956L12.1078 10.5193L15 1.61804Z" stroke="#EABC78"/></svg>'
+  });
 
+  
   // begin of timer
   
   var now = new Date().getDate();
@@ -56,6 +65,7 @@ $(function () {
   var month = 'August ';
   var year = ' 2021, 00:00';
   var futuredate = month + day + year;
+  
 
   var endtime = futuredate;
   document.querySelector('.promo__clock').setAttribute('data-time', futuredate);
@@ -218,5 +228,4 @@ $(function () {
   setTime('timer', endtime);
 
   // the timer's end
-
 });
