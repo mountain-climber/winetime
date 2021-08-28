@@ -39,7 +39,30 @@ $(function () {
     $(this).toggleClass('filter__title--open');
   });
 
-  $('.select-show, .product__form-input').styler();
+  $('.select-show, .product__form-num').styler();
+
+  $('.jq-number__spin.plus').on('click', function () {
+    var num = $('input.product__form-num').attr('value');
+    var nums = Number(num);
+    var numses = nums + 1;
+    $('input.product__form-num').attr('value', numses);
+    if (numses > 9) {
+      $('.jq-number__field').addClass('jq-number__field--two-digit');
+    }
+  });
+  $('.jq-number__spin.minus').on('click', function () {
+    var num = $('input.product__form-num').attr('value');
+    var nums = Number(num);
+    var numses = nums - 1;
+    $('input.product__form-num').attr('value', numses);
+    if (numses < 10) {
+      $('.jq-number__field').removeClass('jq-number__field--two-digit');
+      if (numses < 2){
+        var min = $('input.product__form-num').attr('min');
+        var num = $('input.product__form-num').attr('value', min);
+      }
+    }
+  });
 
   $('.select-show').on('click', function () {
     $('.jq-selectbox__dropdown').toggleClass('jq-selectbox__dropdown--open');
