@@ -18,29 +18,69 @@
           </a>
           <nav class="menu">
             <ul class="menu__list">
-              <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Каталог</a>
+              <li class="menu__list-item menu__list-item--catalogue">
+                <a class="menu__list-link menu__list-link--catalogue" href="#">Каталог</a>
+                <div class="menu__list-link-box">
+                  <a class="menu__list-link" data-modal="modal-one" href="#">Подарочные наборы</a>
+                  <div class="modal" id="modal-one">
+                    <div class="modal-bg modal-exit"></div>
+                    <div class="modal-container">
+                      <div class="modal-text">
+                        Приносим свои извинения, но такой страницы пока нет :(
+                      </div>
+                      <button class="modal-close modal-exit">
+                        <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                      </button>
+                    </div>
+                  </div>
+
+                  <a class="menu__list-link" data-modal="modal-two" href="#">Акции</a>
+                  <div class="modal" id="modal-two">
+                    <div class="modal-bg modal-exit"></div>
+                    <div class="modal-container">
+                      <div class="modal-text">
+                        Приносим свои извинения, но такой страницы пока нет :(
+                      </div>
+                      <button class="modal-close modal-exit">
+                        <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li class="menu__list-item">
                 <a class="menu__list-link" href="#">Главная</a>
               </li>
               <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Блог</a>
-              </li>
-              <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Отзывы</a>
-              </li>
-              <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Подарочные наборы</a>
-              </li>
-              <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Акции</a>
+                <a class="menu__list-link" data-modal="modal-three" href="#">Блог</a>
+                <div class="modal" id="modal-three">
+                  <div class="modal-bg modal-exit"></div>
+                  <div class="modal-container">
+                    <div class="modal-text">
+                      Приносим свои извинения, но такой страницы пока нет :(
+                    </div>
+                    <button class="modal-close modal-exit">
+                      <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                    </button>
+                  </div>
+                </div>
               </li>
               <li class="menu__list-item">
                 <a class="menu__list-link" href="#">Контакты</a>
               </li>
               <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Доставка</a>
+                <a class="menu__list-link" data-modal="modal-four" href="#">Доставка</a>
+                <div class="modal" id="modal-four">
+                  <div class="modal-bg modal-exit"></div>
+                  <div class="modal-container">
+                    <div class="modal-text">
+                      Приносим свои извинения, но такой страницы пока нет :(
+                    </div>
+                    <button class="modal-close modal-exit">
+                      <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                    </button>
+                  </div>
+                </div>
               </li>
             </ul>
           </nav>
@@ -51,12 +91,12 @@
         </div>
         <div class="header__content">
           <h1 class="header__title">
-            Продажа вин и шампанского</span>
+            Продажа вин и <span>шампанского</span>
           </h1>
           <p class="header__info">
             Мы занимаемся продажей самых лучших вин: вкусных, ароматных и, самое главное, ваших любимых!
           </p>
-          <a class="header__link" href="#">Смотреть каталог</a>
+          <a class="header__link" href="catalogue.html">Смотреть каталог</a>
         </div>
       </div>
     </header>
@@ -67,25 +107,24 @@
             <div class="promo__content">
               <h3 class="title promo__title">Вино</h3>
               <h4 class="promo__subtitle">
-                Babich The Patriarch Hawke's Bay
-                в подарочной упаковке
+                Champagne Lanson White Label Dry-Sec
+                <span>в подарочной упаковке</span>
               </h4>
               <p class="promo__info">
-                Сложный букет с яркими тонами
-                ежевики и черных фруктов.
-                <span>
-                  Вкус элегантный, с тонами пряностей
-                  и фруктов и бархатными танинами.
-                  Продолжительное согревающее
-                  фруктовое послевкусие.
-                </span>
+                Соломенно-желтый цвет с золотистым блеском. Продолжительный и тонкий перляж. В букете раскрываются
+                изящные ароматы белых
+                цветов, спелой груши и приятные минеральные нотки. Освежающее, прекрасно сбалансированное вино, с
+                элегантным
+                продолжительным послевкусием.
               </p>
             </div>
-            <img class="promo__img" src="images/promo-decor.png" alt="promo img">
+            <a class="promo__link-img" href="15.html">
+              <img class="promo__img" src="images/promo-decor.png" alt="promo img">
+            </a>
             <div class="promo__clock-wrapper">
               <div class="promo__price">
-                <div class="promo__price-old">15 000 ₽</div>
-                <div class="promo__price-new">13 999 ₽</div>
+                <div class="promo__price-old">11 349 ₽</div>
+                <div class="promo__price-new">8 790 ₽</div>
               </div>
               <h4 class="promo__clock-title">До конца акции осталось:</h4>
               <div id="promo__clock" class="promo__clock">
@@ -104,7 +143,7 @@
                   <span class="promo__seconds-text promo__text">Секунд</span>
                 </div>
               </div>
-              <a class="promo__link" href="#">Купить сейчас</a>
+              <a class="promo__link" href="15.html">Купить сейчас</a>
             </div>
           </div>
         </div>
@@ -122,7 +161,7 @@
                   <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
                 </a>
                 <a class="catalogue-item__title-link" href="#">
-                  <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                  <h4 class="catalogue-item__title">Вино Koonunga Hill Shiraz Cabernet</h4>
                 </a>
                 <div class="catalogue-item__info">
                   <span class="catalogue-item__info-name">Полусухое</span>

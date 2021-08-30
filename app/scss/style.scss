@@ -18,6 +18,7 @@
     align-items: center;
   }
   &__phone{
+    padding-left: 50px;
     font-size: 24px;
     line-height: 24px;
     @extend %applegaramond-400;
@@ -29,9 +30,10 @@
     height: calc(100vh - 66px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
   }
   &__title{
+    margin-top: 21vh;
     font-size: 48px;
     line-height: 58px;
     @extend %century-400;
@@ -51,11 +53,22 @@
     line-height: 37px;
     display: inline-block;
     padding: 12px 60px;
-    border: 2px solid $accent;
+    background-color: #ccc;
+    color: #000;
     max-width: 295px;
     width: 100%;
     text-align: center;
+    box-shadow: 0px 10px 40px #ccc;
+    transition: all .3s;
+    &:hover{
+      color: #fff;
+      background-color: $bg;
+    }
   }
+}
+
+.logo{
+  padding-right: 60px;
 }
 
 .menu{
@@ -63,12 +76,96 @@
     display: flex;
   }
   &__list-item{
-    font-size: 16px;
-    line-height: 26px;
     margin-right: 25px;
+    &:first-child{
+      margin-right: 20px;
+    }
     &:last-child{
       margin-right: 0;
     }
+  }
+  &__list-link{
+    font-size: 17px;
+    line-height: 26px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover{
+      color: $accent;
+    }
+  }
+  &__list-link-box{
+    padding-top: 10px;
+    position: absolute;
+    opacity: 0;
+    transition: all 1s;
+    .menu__list-link{
+      padding-top: 3px;
+      display: block;
+    }
+  }
+  &__list-link--catalogue{
+    padding-right: 28px;
+    position: relative;
+    display: inline-block;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('../images/icons/angle-down.svg');
+      transform: rotate(-90deg);
+      transition: all .4s;;
+      top: 3px;
+      right: 0;
+    }
+  }
+}
+
+.modal{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.open{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+  &-text{
+    color: $bg;
+  }
+  &-bg{
+    position: absolute;
+    background: $bg;
+    opacity: .9;
+    width: 100%;
+    height: 100%;
+  }
+  &-container{
+    border-radius: 10px;
+    background: #fff;
+    position: relative;
+    padding: 30px 50px;
+  }
+  &-close{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    padding: 0;
+    outline: none;
+    appearance: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
   }
 }
 
@@ -151,7 +248,7 @@
     align-items: center;
   }
   &__content{
-    max-width: 336px;
+    max-width: 400px;
   }
   &__title{
     margin-bottom: 36px;
@@ -161,6 +258,9 @@
     font-size: 24px;
     line-height: 44px;
     margin-bottom: 30px;
+    span{
+      display: block;
+    }
   }
   &__info{
     max-width: 325px;
@@ -215,7 +315,7 @@
     margin-bottom: 45px;
   }
   &__clock-item{
-    width: 170px;
+    // width: 115px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -353,7 +453,7 @@
 .catalogue-item{
   max-width: 347px;
   width: 100%;  
-  padding: 30px 0 27px;
+  padding: 30px 15px 27px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -376,17 +476,19 @@
     }
   }
   &__img{
-    // width: 87px;
     height: 320px;
     object-fit: cover;
   }
   &__title{
     font-size: 24px;
-    line-height: 40px;
+    line-height: 29px;
+    text-align: center;
+    margin-bottom: 5px;
   }
   &__info{
     color: rgba(#fff, 0.7);
     display: flex;
+    margin-top: auto;
   }
   &__info-name{
     padding-right: 10px;
@@ -403,7 +505,7 @@
     align-items: center;
   }
   &__price-title{
-    padding-right: 17px;
+    padding-right: 15px;
     position: relative;
     &::after{
       content: '-';
@@ -412,7 +514,7 @@
     }
   }
   &__price{
-    margin-left: 11px;
+    margin-left: 9px;
     color: $accent;
     font-size: 24px;
     line-height: 40px;
@@ -824,3 +926,5 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+@import 'media';

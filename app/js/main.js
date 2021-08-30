@@ -1,5 +1,33 @@
 $(function () {
 
+  var modals = document.querySelectorAll('[data-modal]');
+
+  modals.forEach(function (trigger) {
+    trigger.addEventListener('click', function (event) {
+      event.preventDefault();
+      var modal = document.getElementById(trigger.dataset.modal);
+      modal.classList.add('open');
+      var exits = modal.querySelectorAll('.modal-exit');
+      exits.forEach(function (exit) {
+        exit.addEventListener('click', function (event) {
+          event.preventDefault();
+          modal.classList.remove('open');
+        });
+      });
+    });
+  });
+
+  $(".menu__list-link--catalogue").hover(function () {
+    $(".menu__list-link-box").css("opacity", "1");
+    $(".menu__list-link-box").hover(function () {
+      $('.menu__list-link-box').css("opacity", "1");
+    }, function () {
+      $(".menu__list-link-box").css("opacity", "0");
+    });
+  }, function () {
+    $(".menu__list-link-box").css("opacity", "0");
+  });
+
   $('.filter-price__input').ionRangeSlider({
     type: "double"
   });
@@ -85,12 +113,72 @@ $(function () {
   
   var now = new Date().getDate();
   var day = now + 2;
-  var month = 'August ';
-  var year = ' 2021, 00:00';
-  var futuredate = month + day + year;
+  var monthnum = new Date().getMonth();
+  var month;
+
+  if (monthnum == 7 || 9 || 11 || 0 || 2 || 4 || 6){
+    if (now > 29){
+      day = day - 31;
+      monthnum = monthnum + 1;
+    }
+  }
+  else if (monthnum == 8 || 10 || 3 || 5){
+    if (now > 28) {
+      day = day - 30;
+      monthnum = monthnum + 1;
+    }
+  }
+  else{
+    if (now > 26) {
+      day = day - 28;
+      monthnum = monthnum + 1;
+    }
+  }
+
+  if (monthnum == 0) {
+    month = 'January';
+  }
+  if (monthnum == 1) {
+    month = 'February';
+  }
+  if (monthnum == 2) {
+    month = 'March';
+  }
+  if (monthnum == 3) {
+    month = 'April';
+  }
+  if (monthnum == 4) {
+    month = 'May';
+  }
+  if (monthnum == 5) {
+    month = 'June';
+  }
+  if (monthnum == 6) {
+    month = 'July';
+  }
+  if (monthnum == 7) {
+    month = 'August';
+  }
+  if (monthnum == 8) {
+    month = 'September';
+  }
+  if (monthnum == 9) {
+    month = 'October';
+  }
+  if (monthnum == 10) {
+    month = 'November';
+  }
+  if (monthnum == 11) {
+    month = 'December';
+  }
+
+  var space = ' ';
+  var year = '2021, 00:00';
+  var futuredate = month + space + day + space + year;
   
 
   var endtime = futuredate;
+  // var endtime = document.querySelector('.promo__clock').getAttribute('data-time');
   document.querySelector('.promo__clock').setAttribute('data-time', futuredate);
   
   // приводим к стандартному виду 03:04:05, вместо 3:4:5
