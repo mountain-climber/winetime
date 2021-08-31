@@ -18,7 +18,7 @@
     align-items: center;
   }
   &__phone{
-    padding-left: 50px;
+    margin-left: 50px;
     font-size: 24px;
     line-height: 24px;
     @extend %applegaramond-400;
@@ -26,11 +26,13 @@
       color: $accent;
     }
   }
+  &__btn{
+    display: none;
+  }
   &__content{
     height: calc(100vh - 66px);
     display: flex;
     flex-direction: column;
-    // justify-content: center;
   }
   &__title{
     margin-top: 21vh;
@@ -68,10 +70,15 @@
 }
 
 .logo{
-  padding-right: 60px;
+  margin-right: 60px;
 }
 
 .menu{
+  position: relative;
+  z-index: 10;
+  &.menu-header--open{
+    transform: translateY(0);
+  }
   &__list{
     display: flex;
   }
@@ -87,27 +94,41 @@
   &__list-link{
     font-size: 17px;
     line-height: 26px;
-    display: inline-block;
     cursor: pointer;
-    transition: all .3s;
+    transition: all .5s;
     &:hover{
       color: $accent;
     }
   }
   &__list-link-box{
-    padding-top: 10px;
+    display: none;
     position: absolute;
-    opacity: 0;
-    transition: all 1s;
+    // opacity: 0;
+    transition: all .5s;
+    &.menu__list-link-box--adaptive{
+      background-color: $bg;
+    }
     .menu__list-link{
-      padding-top: 3px;
-      display: block;
+      // font-size: 0;
+      padding-top: 4px;
+      transition: all .5s;
+    }
+    &.menu__list-link-box--open{
+      // opacity: 1;
+      .menu__list-link{
+        // font-size: 17px;
+      }
     }
   }
   &__list-link--catalogue{
     padding-right: 28px;
     position: relative;
     display: inline-block;
+    &.menu__list-link--catalogue-open{
+      &::after{
+        transform: rotate(0);
+      }
+    }
     &::after{
       content: '';
       position: absolute;
@@ -115,15 +136,28 @@
       height: 20px;
       background-image: url('../images/icons/angle-down.svg');
       transform: rotate(-90deg);
-      transition: all .4s;;
+      transition: all .5s;
       top: 3px;
       right: 0;
     }
   }
 }
 
+.menu-footer{
+  margin-right: 62px;
+  .menu__list{
+    display: block;
+  }
+  .menu__list-item{
+    margin-right: 0;
+    font-size: 18px;
+    line-height: 33px;
+  }
+}
+
 .modal{
   position: fixed;
+  width: 91.8vw;
   width: 100vw;
   height: 100vh;
   opacity: 0;
@@ -131,6 +165,7 @@
   transition: all 0.3s ease;
   top: 0;
   left: 0;
+  left: -15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,19 +177,21 @@
   }
   &-text{
     color: $bg;
+    text-align: center;
   }
   &-bg{
     position: absolute;
     background: $bg;
     opacity: .9;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
   }
   &-container{
     border-radius: 10px;
     background: #fff;
     position: relative;
-    padding: 30px 50px;
+    padding: 30px;
+    margin: 0 15px;
   }
   &-close{
     position: absolute;
@@ -203,17 +240,6 @@
   }
   &__content{
     display: flex;
-  }
-  .menu{
-    margin-right: 62px;
-    &__list{
-      display: block;
-    }
-    &__list-item{
-      margin-right: 0;
-      font-size: 18px;
-      line-height: 33px;
-    }
   }
   &__company,
   &__address,
@@ -315,7 +341,6 @@
     margin-bottom: 45px;
   }
   &__clock-item{
-    // width: 115px;
     display: flex;
     flex-direction: column;
     align-items: center;

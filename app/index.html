@@ -16,12 +16,12 @@
           <a class="logo" href="#">
             <img class="logo__img" src="images/logo.svg" alt="logo">
           </a>
-          <nav class="menu">
+          <nav class="menu menu-header">
             <ul class="menu__list">
-              <li class="menu__list-item menu__list-item--catalogue">
+              <li class="menu__list-item">
                 <a class="menu__list-link menu__list-link--catalogue" href="#">Каталог</a>
                 <div class="menu__list-link-box">
-                  <a class="menu__list-link" data-modal="modal-one" href="#">Подарочные наборы</a>
+                  <div class="menu__list-link-wrap"><a class="menu__list-link" data-modal="modal-one" href="#">Подарочные наборы</a></div>
                   <div class="modal" id="modal-one">
                     <div class="modal-bg modal-exit"></div>
                     <div class="modal-container">
@@ -34,7 +34,7 @@
                     </div>
                   </div>
 
-                  <a class="menu__list-link" data-modal="modal-two" href="#">Акции</a>
+                  <div class="menu__list-link-wrap"><a class="menu__list-link" data-modal="modal-two" href="#">Акции</a></div>
                   <div class="modal" id="modal-two">
                     <div class="modal-bg modal-exit"></div>
                     <div class="modal-container">
@@ -88,6 +88,9 @@
             8 (800)
             <span>500 20-40</span>
           </a>
+          <button class="header__btn">
+            <span class="header__btn-line"></span>
+          </button>
         </div>
         <div class="header__content">
           <h1 class="header__title">
@@ -100,7 +103,7 @@
         </div>
       </div>
     </header>
-    <main class="main">
+    <!-- <main class="main">
       <section class="promo">
         <div class="container">
           <div class="promo__inner">
@@ -345,7 +348,7 @@
           <div class="footer__top-inner">
             <h3 class="title footer__title">Карта сайта</h3>
             <div class="footer__content">
-              <nav class="menu">
+              <nav class="menu menu-footer">
                 <ul class="menu__list">
                   <li class="menu__list-item">
                     <a class="menu__list-link" href="#">Каталог</a>
@@ -397,7 +400,7 @@
             Федерации.</span>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </div>
 
 
