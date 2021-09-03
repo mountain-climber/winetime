@@ -21,7 +21,12 @@
               <li class="menu__list-item">
                 <a class="menu__list-link menu__list-link--catalogue" href="#">Каталог</a>
                 <div class="menu__list-link-box">
-                  <div class="menu__list-link-wrap"><a class="menu__list-link" data-modal="modal-one" href="#">Подарочные наборы</a></div>
+                  <div class="menu__list-link-wrap menu__list-link-wrap--disabled">
+                    <a class="menu__list-link" href="catalogue.html">Каталог</a>
+                  </div>
+                  <div class="menu__list-link-wrap">
+                    <a class="menu__list-link" data-modal="modal-one" href="#">Подарочные наборы</a>
+                  </div>
                   <div class="modal" id="modal-one">
                     <div class="modal-bg modal-exit"></div>
                     <div class="modal-container">
@@ -34,7 +39,9 @@
                     </div>
                   </div>
 
-                  <div class="menu__list-link-wrap"><a class="menu__list-link" data-modal="modal-two" href="#">Акции</a></div>
+                  <div class="menu__list-link-wrap">
+                    <a class="menu__list-link" data-modal="modal-two" href="#">Акции</a>
+                  </div>
                   <div class="modal" id="modal-two">
                     <div class="modal-bg modal-exit"></div>
                     <div class="modal-container">
@@ -67,20 +74,6 @@
               </li>
               <li class="menu__list-item">
                 <a class="menu__list-link" href="#">Контакты</a>
-              </li>
-              <li class="menu__list-item">
-                <a class="menu__list-link" data-modal="modal-four" href="#">Доставка</a>
-                <div class="modal" id="modal-four">
-                  <div class="modal-bg modal-exit"></div>
-                  <div class="modal-container">
-                    <div class="modal-text">
-                      Приносим свои извинения, но такой страницы пока нет :(
-                    </div>
-                    <button class="modal-close modal-exit">
-                      <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
-                    </button>
-                  </div>
-                </div>
               </li>
             </ul>
           </nav>
@@ -341,7 +334,7 @@
           </div>
         </div>
       </section>
-    </main>
+    </main> -->
     <footer class="footer">
       <div class="container">
         <div class="footer__top">
@@ -357,22 +350,49 @@
                     <a class="menu__list-link" href="#">Главная</a>
                   </li>
                   <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Блог</a>
+                    <a class="menu__list-link" data-modal="modal-fourfivesix" href="#">Блог</a>
+                    <div class="modal" id="modal-fourfivesix">
+                      <div class="modal-bg modal-exit"></div>
+                      <div class="modal-container">
+                        <div class="modal-text">
+                          Приносим свои извинения, но такой страницы пока нет :(
+                        </div>
+                        <button class="modal-close modal-exit">
+                          <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                        </button>
+                      </div>
+                    </div>
                   </li>
                   <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Отзывы</a>
+                    <a class="menu__list-link" data-modal="modal-fivesix" href="#">Подарочные наборы</a>
+                    <div class="modal" id="modal-fivesix">
+                      <div class="modal-bg modal-exit"></div>
+                      <div class="modal-container">
+                        <div class="modal-text">
+                          Приносим свои извинения, но такой страницы пока нет :(
+                        </div>
+                        <button class="modal-close modal-exit">
+                          <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                        </button>
+                      </div>
+                    </div>
                   </li>
                   <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Подарочные наборы</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Акции</a>
+                    <a class="menu__list-link" data-modal="modal-six" href="#">Акции</a>
+                    <div class="modal" id="modal-six">
+                      <div class="modal-bg modal-exit"></div>
+                      <div class="modal-container">
+                        <div class="modal-text">
+                          Приносим свои извинения, но такой страницы пока нет :(
+                        </div>
+                        <button class="modal-close modal-exit">
+                          <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                        </button>
+                      </div>
+                    </div>
                   </li>
                   <li class="menu__list-item">
                     <a class="menu__list-link" href="#">Контакты</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Доставка</a>
                   </li>
                 </ul>
               </nav>
@@ -400,7 +420,7 @@
             Федерации.</span>
         </div>
       </div>
-    </footer> -->
+    </footer>
   </div>
 
 

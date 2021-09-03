@@ -1,5 +1,12 @@
 $(function () {
 
+  var scrollX = window.innerWidth - document.body.clientWidth;
+  var calc = 'width: calc(100vw - ';
+  var px = 'px';
+  var rightBracket = ');'
+  var modalWidth = calc + scrollX + px + rightBracket;
+  document.querySelectorAll('.modal').forEach(modal => { modal.setAttribute('style', modalWidth) });
+
   var modals = document.querySelectorAll('[data-modal]');
 
   modals.forEach(function (trigger) {
@@ -17,33 +24,47 @@ $(function () {
     });
   });
 
-  $('.menu__list-link--catalogue').hover(function () {
-    $('.menu__list-link-box').toggleClass('menu__list-link-box--open');
-    $(this).toggleClass('menu__list-link--catalogue-open');
-  });
+  function hoverlink() {
+    document.querySelector('.menu__list-link--catalogue').classList.add('menu__list-link--catalogue-open');
+    document.querySelector('.menu__list-link-box').classList.add('menu__list-link-box--open');
+  }
 
-  $('.menu__list-link-box').hover(function () {
-    $('.menu__list-link-box').toggleClass('menu__list-link-box--open');
-    $(this).toggleClass('menu__list-link--catalogue-open');
-  });
+  function unhoverlink() {
+    document.querySelector('.menu__list-link--catalogue').classList.remove('menu__list-link--catalogue-open');
+    document.querySelector('.menu__list-link-box').classList.remove  ('menu__list-link-box--open');
+  }
 
-  if ($(window).width() < 501){
-    $('.menu__list-link-box').addClass('menu__list-link-box--adaptive');
-     $('.menu__list-link--catalogue').hover(function () {
-       $('.menu__list-link-box').removeClass('menu__list-link-box--open');
-       $(this).removeClass('menu__list-link--catalogue-open');
-    });
+  document.querySelector('.menu__list-link--catalogue').addEventListener('mouseover', hoverlink, false);
+  document.querySelector('.menu__list-link--catalogue').addEventListener('mouseout', unhoverlink, false);
 
-    $('.menu__list-link--catalogue').hover(function () {
-      $(this).removeClass('menu__list-link--catalogue-open');
-    });
+  
+
+  function hoverbox() {
+    document.querySelector('.menu__list-link-box').classList.add('menu__list-link-box--open');
+    document.querySelector('.menu__list-link--catalogue').classList.add('menu__list-link--catalogue-open');
+  }
+
+  function unhoverbox() {
+    document.querySelector('.menu__list-link-box').classList.remove('menu__list-link-box--open');
+    document.querySelector('.menu__list-link--catalogue').classList.remove('menu__list-link--catalogue-open');
+  }
+
+  document.querySelector('.menu__list-link-box').addEventListener('mouseover', hoverbox, false);
+  document.querySelector('.menu__list-link-box').addEventListener('mouseout', unhoverbox, false);
+
+
+  if ($(window).width() < 501) {
+    document.querySelector('.menu__list-link--catalogue').removeAttribute('href');
+
+    document.querySelector('.menu__list-link--catalogue').removeEventListener('mouseover', hoverlink, false);
+    document.querySelector('.menu__list-link--catalogue').removeEventListener('mouseout', unhoverlink, false);
+
+    document.querySelector('.menu__list-link-box').removeEventListener('mouseover', hoverbox, false);
+    document.querySelector('.menu__list-link-box').removeEventListener('mouseout', unhoverbox, false);
 
     $('.menu__list-link--catalogue').on('click', function () {
       $(this).toggleClass('menu__list-link--catalogue-open');
-      $('.menu__list-link-box').slideToggle({
-        easing: "linear",
-        duration: 500
-      });
+      $('.menu__list-link-box').toggleClass('menu__list-link-box--open');
     });
   }
 
@@ -109,7 +130,7 @@ $(function () {
     $('input.product__form-num').attr('value', numses);
     if (numses < 10) {
       $('.jq-number__field').removeClass('jq-number__field--two-digit');
-      if (numses < 2){
+      if (numses < 2) {
         var min = $('input.product__form-num').attr('min');
         var num = $('input.product__form-num').attr('value', min);
       }
@@ -132,27 +153,27 @@ $(function () {
     starSvg: '<svg width="30px" height="30px" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 1.61804L17.8922 10.5193L18.0044 10.8647H18.3677H27.727L20.1552 16.366L19.8613 16.5795L19.9735 16.925L22.8657 25.8262L15.2939 20.325L15 20.1115L14.7061 20.325L7.13428 25.8262L10.0265 16.925L10.1387 16.5795L9.84482 16.366L2.27299 10.8647H11.6323H11.9956L12.1078 10.5193L15 1.61804Z" stroke="#EABC78"/></svg>'
   });
 
-  
+
   // begin of timer
-  
+
   var now = new Date().getDate();
   var day = now + 2;
   var monthnum = new Date().getMonth();
   var month;
 
-  if (monthnum == 7 || 9 || 11 || 0 || 2 || 4 || 6){
-    if (now > 29){
+  if (monthnum == 7 || 9 || 11 || 0 || 2 || 4 || 6) {
+    if (now > 29) {
       day = day - 31;
       monthnum = monthnum + 1;
     }
   }
-  else if (monthnum == 8 || 10 || 3 || 5){
+  else if (monthnum == 8 || 10 || 3 || 5) {
     if (now > 28) {
       day = day - 30;
       monthnum = monthnum + 1;
     }
   }
-  else{
+  else {
     if (now > 26) {
       day = day - 28;
       monthnum = monthnum + 1;
@@ -199,12 +220,12 @@ $(function () {
   var space = ' ';
   var year = '2021, 00:00';
   var futuredate = month + space + day + space + year;
-  
+
 
   var endtime = futuredate;
   // var endtime = document.querySelector('.promo__clock').getAttribute('data-time');
   document.querySelector('.promo__clock').setAttribute('data-time', futuredate);
-  
+
   // приводим к стандартному виду 03:04:05, вместо 3:4:5
   function makeCorrectDate(uncorrectDate) {
     let correctDate = uncorrectDate;
