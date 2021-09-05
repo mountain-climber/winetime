@@ -145,17 +145,6 @@
   }
 }
 
-.menu-footer{
-  margin-right: 62px;
-  .menu__list{
-    display: block;
-  }
-  .menu__list-item{
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-}
-
 .modal {
   position: fixed;
   height: 100vh;
@@ -235,9 +224,19 @@
 }
 
 .footer{
-  padding: 80px 0 40px;
+  padding: 90px 0 40px;
   font-size: 17px;
   line-height: 26px;
+  .menu{
+    margin-right: 62px;
+    &__list{
+      display: block;
+    }
+    &__list-item{
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
   &__top{
     display: flex;
     justify-content: space-between;
@@ -311,14 +310,22 @@
     }
   }
   &__info{
-    max-width: 325px;
     span{
       display: block;
     }
   }
+  &__link-img{
+    margin-left: 65px;
+  }
+  &__img{
+    max-width: 289px;
+    max-height: 400px;
+    object-fit: cover;
+  }
   &__clock-wrapper{
     max-width: 530px;
-    width: 100%
+    width: 100%;
+    margin-left: 70px;
   }
   &__price{
     font-size: 36px;
@@ -337,7 +344,8 @@
       width: 120px;
       height: 3px;
       background-color: $accent;
-      top: 32px;
+      top: 50%;
+      transform: translateY(-50%);
       left: 8px;
     }
     &::after{
@@ -357,6 +365,7 @@
     font-size: 30px;
     line-height: 55px;
     margin-bottom: 30px;
+    @extend %mallanna-400;
   }
   &__clock{
     display: flex;
@@ -394,10 +403,6 @@
     font-size: 30px;
     line-height: 44px;
     color: $accent;
-  }
-  &__seconds-text{
-    width: 125px;
-    text-align: center;
   }
   &__link{
     border-bottom: 1px solid #FCEDD6;
@@ -439,6 +444,7 @@
   &__items{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px 0;
   }
 }
 
@@ -472,6 +478,38 @@
   }
   &__item-img{
     margin-bottom: 20px;
+  }
+}
+
+.blog{
+  padding-top: 107px;
+  &__title{
+    margin-bottom: 64px;
+  }
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 34px;
+  }
+  &__item{
+    max-width: 450px;
+  }
+  &__link-img{
+    display: inline-block;
+    margin-bottom: 18px;
+  }
+  &__img{
+    max-height: 415px;
+    object-fit: cover;
+  }
+  &__item-titlelink{
+    display: inline-block;
+    max-width: 305px;
+  }
+  &__item-title{
+    font-size: 24px;
+    line-height: 44px;
+    @extend %mallanna-400;
   }
 }
 

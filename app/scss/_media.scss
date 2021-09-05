@@ -1,4 +1,20 @@
 @media(max-width: 1366px){
+  .promo{
+    &__inner{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__link-img{
+      margin-right: auto;
+    }
+    &__clock-wrapper{
+      margin: 50px 65px 0;
+    }
+    &__price{
+      margin-bottom: 40px;
+      justify-content: center;
+    }
+  }
   .map{
     width: 550px;
     height: 380px;
@@ -10,6 +26,13 @@
 }
 
 @media(max-width: 1220px){
+  .popular,
+  .discount,
+  .viewed{
+    &__items{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }
 
 @media (max-width: 1100px){
@@ -21,39 +44,11 @@
       height: 330px;
     }
   }
-  .menu-footer{
-    margin-right: 42px;
+  .footer{
+    .menu{
+      margin-right: 42px;
+    }
   }
-  // .footer{
-  //   padding: 40px 0;
-  //   &__title{
-  //     display: none;
-  //   }
-  //   &__top{
-  //     display: block;
-  //     margin-bottom: 30px;
-  //   }
-  //   &__info{
-  //     display: none;
-  //   }
-  // }
-  // .map{
-  //   display: none;
-  // }
-  // .menu-footer{
-  //   width: 100%;
-  //   .menu__list{
-  //     display: flex;
-  //     // justify-content: center;
-  //   }
-  //   .menu__list-item{
-  //     margin-bottom: 0;
-  //     margin-right: 25px;
-  //     &:last-child{
-  //       margin-right: 0;
-  //     }
-  //   }
-  // }
 }
 
 @media(max-width: 992px){
@@ -63,6 +58,14 @@
     iframe{
       width: 400px;
       height: 350px;
+    }
+  }
+  .popular,
+  .discount,
+  .viewed{
+    &__items{
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px 0;
     }
   }
 }
@@ -92,9 +95,38 @@
       width: 100%;
     }
   }
+  .promo{
+    &__link-img{
+      margin-left: 20px;
+    }
+  }
 }
 
 @media(max-width: 768px){
+  .promo{
+    &__content{
+      max-width: 100%;
+    }
+    &__link-img{
+      margin: 30px 0;
+    }
+    &__clock-wrapper{
+      margin: 0;
+    }
+    &__clock{
+      justify-content: center;
+    }
+  }
+  .popular,
+  .discount,
+  .viewed{
+    &__items{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .catalogue-item{
+    margin: 0 auto;
+  }
 }
 
 @media(max-width: 620px){
@@ -115,6 +147,22 @@
   }
   .footer{
     padding: 50px 0;
+    &__title{
+      margin-bottom: 40px;
+    }
+  }
+  .promo{
+    padding-top: 60px;
+    &__link-img{
+      margin: 10px 0;
+    }
+    &__img{
+      max-width: 200px;
+    }
+    &__clock-item{
+      padding-right: 40px;
+      margin-right: 40px;
+    }
   }
 }
 
@@ -222,7 +270,7 @@
       display: block;
     }
     .menu{
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
   }
   .map{
@@ -231,9 +279,62 @@
       height: 300px;
     }
   }
+  .promo{
+    &__title,
+    &__clock-title{
+      margin-bottom: 20px;
+    }
+    &__subtitle{
+      line-height: 35px;
+      margin-bottom: 20px;
+    }
+    &__price{
+      font-size: 30px;
+      line-height: 55px;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    &__price-old{
+      &::before{
+        width: 90px;
+      }
+      &::after{
+        display: none;
+      }
+    }
+    &__price-new{
+      font-size: 36px;
+    }
+    &__clock{
+      margin-bottom: 30px;
+    }
+    &__clock-item{
+      padding-right: 17px;
+      margin-right: 17px;
+      &:last-child{
+        width: 82px;
+      }
+      &::after{
+        top: 22px;
+        height: 60px;
+      }
+    }
+    &__time{
+      font-size: 36px;
+      line-height: 60px;
+    }
+    &__text{
+      font-size: 20px;
+      line-height: 40px;
+    }
+  }
 }
 
 @media (max-width: 375px){
+  .title{
+    font-size: 30px;
+    line-height: 30px;
+  }
   .header{
     &__title{
       font-size: 43px;
@@ -246,9 +347,13 @@
     &__link{
       padding: 12px 50px;
     }
-    &__content{
-      // height: calc(100vh - 51px);
-      // padding: 0;
+  }
+  .promo{
+    &__price{
+      font-size: 26px;
+    }
+    &__price-new{
+      font-size: 30px;
     }
   }
 }

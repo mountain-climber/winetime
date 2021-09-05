@@ -1,5 +1,7 @@
 $(function () {
 
+  $('.select-show, .product__form-num').styler();
+
   var scrollX = window.innerWidth - document.body.clientWidth;
   var calc = 'width: calc(100vw - ';
   var px = 'px';
@@ -111,8 +113,6 @@ $(function () {
     });
     $(this).toggleClass('filter__title--open');
   });
-
-  $('.select-show, .product__form-num').styler();
 
   $('.jq-number__spin.plus').on('click', function () {
     var num = $('input.product__form-num').attr('value');
