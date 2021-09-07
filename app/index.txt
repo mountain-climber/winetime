@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -154,7 +154,7 @@
             <div class="popular__items">
               <div class="catalogue-item">
                 <a class="catalogue-item__link" href="#">
-                  <img class="catalogue-item__img" src="images/product/1.png" alt="catalogue img">
+                  <img class="catalogue-item__img" src="images/catalogue/1.png" alt="catalogue img">
                 </a>
                 <a class="catalogue-item__title-link" href="#">
                   <h4 class="catalogue-item__title">Вино Koonunga Hill Shiraz Cabernet</h4>
@@ -170,7 +170,7 @@
               </div>
               <div class="catalogue-item">
                 <a class="catalogue-item__link" href="#">
-                  <img class="catalogue-item__img" src="images/product/2.png" alt="catalogue img">
+                  <img class="catalogue-item__img" src="images/catalogue/2.png" alt="catalogue img">
                 </a>
                 <a class="catalogue-item__title-link" href="#">
                   <h4 class="catalogue-item__title">CORTESIA Красное</h4>
@@ -187,7 +187,7 @@
 
               <div class="catalogue-item">
                 <a class="catalogue-item__link" href="#">
-                  <img class="catalogue-item__img" src="images/product/3.png" alt="catalogue img">
+                  <img class="catalogue-item__img" src="images/catalogue/3.png" alt="catalogue img">
                 </a>
                 <a class="catalogue-item__title-link" href="#">
                   <h4 class="catalogue-item__title">CORTESIA Красное</h4>
@@ -204,7 +204,7 @@
 
               <div class="catalogue-item">
                 <a class="catalogue-item__link" href="#">
-                  <img class="catalogue-item__img" src="images/product/4.png" alt="catalogue img">
+                  <img class="catalogue-item__img" src="images/catalogue/4.png" alt="catalogue img">
                 </a>
                 <a class="catalogue-item__title-link" href="#">
                   <h4 class="catalogue-item__title">CORTESIA Красное</h4>
@@ -228,7 +228,7 @@
             <div class="discount__items">
               <div class="catalogue-item">
                 <a class="catalogue-item__link" href="#">
-                  <img class="catalogue-item__img" src="images/product/12.png" alt="catalogue img">
+                  <img class="catalogue-item__img" src="images/catalogue/12.png" alt="catalogue img">
                 </a>
                 <a class="catalogue-item__title-link" href="#">
                   <h4 class="catalogue-item__title">CORTESIA Красное</h4>
@@ -245,7 +245,7 @@
 
               <div class="catalogue-item">
                 <a class="catalogue-item__link" href="#">
-                  <img class="catalogue-item__img" src="images/product/21.png" alt="catalogue img">
+                  <img class="catalogue-item__img" src="images/catalogue/21.png" alt="catalogue img">
                 </a>
                 <a class="catalogue-item__title-link" href="#">
                   <h4 class="catalogue-item__title">CORTESIA Красное</h4>
@@ -262,7 +262,7 @@
 
               <div class="catalogue-item">
                 <a class="catalogue-item__link" href="#">
-                  <img class="catalogue-item__img" src="images/product/5.png" alt="catalogue img">
+                  <img class="catalogue-item__img" src="images/catalogue/5.png" alt="catalogue img">
                 </a>
                 <a class="catalogue-item__title-link" href="#">
                   <h4 class="catalogue-item__title">CORTESIA Красное</h4>
@@ -279,7 +279,7 @@
 
               <div class="catalogue-item">
                 <a class="catalogue-item__link" href="#">
-                  <img class="catalogue-item__img" src="images/product/9.png" alt="catalogue img">
+                  <img class="catalogue-item__img" src="images/catalogue/9.png" alt="catalogue img">
                 </a>
                 <a class="catalogue-item__title-link" href="#">
                   <h4 class="catalogue-item__title">CORTESIA Красное</h4>
@@ -513,16 +513,11 @@
               style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
-        <div class="footer__bottom">
-          <div class="footer__text">
-            Изображения и текст взяты с сайта <a class="footer__text-link" href="https://simplewine.ru/">simplewine.ru</a>
-          </div>
-          <div class="footer__copy">
-            © 2021 ОАО «Wine time»
-            УНП 190130976
-            <span>Лицензия № 33540/75, выдана 17 апреля 2004 года Государственным комитетом по стандартизации Российской
-              Федерации.</span>
-          </div>
+        <div class="footer__copy">
+          © 2021 ОАО «Wine time»
+          УНП 190130976
+          <span>Лицензия № 33540/75, выдана 17 апреля 2004 года Государственным комитетом по стандартизации Российской
+            Федерации.</span>
         </div>
       </div>
     </footer>
