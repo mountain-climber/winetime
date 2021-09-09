@@ -2,6 +2,7 @@ $(function () {
 
   $('.filter-btn').on('click', function () {
     $('.catalogue__filters').slideToggle();
+    $(this).toggleClass('filter-btn--open');
   });
 
   $('.filter-silent__title').on('click', function () {
@@ -98,7 +99,7 @@ $(function () {
     });
   }
 
-  if ($(window).width() < 621){
+  if ($(window).width() < 641){
     $('.about__items, .blog__inner').slick({
       prevArrow: prev,
       nextArrow: next,

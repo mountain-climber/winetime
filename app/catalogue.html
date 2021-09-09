@@ -16,31 +16,64 @@
           <a class="logo" href="#">
             <img class="logo__img" src="images/logo.svg" alt="logo">
           </a>
-          <nav class="menu">
+          <nav class="menu menu-header">
             <ul class="menu__list">
               <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Каталог</a>
+                <a class="menu__list-link menu__list-link--catalogue" href="#">Каталог</a>
+                <div class="menu__list-link-box">
+                  <div class="menu__list-link-wrap menu__list-link-wrap--disabled">
+                    <a class="menu__list-link" href="catalogue.html">Каталог</a>
+                  </div>
+                  <div class="menu__list-link-wrap">
+                    <a class="menu__list-link" data-modal="modal-one" href="#">Подарочные наборы</a>
+                  </div>
+                  <div class="modal" id="modal-one">
+                    <div class="modal-bg modal-exit"></div>
+                    <div class="modal-container">
+                      <div class="modal-text">
+                        Приносим свои извинения, но такой страницы пока нет :(
+                      </div>
+                      <button class="modal-close modal-exit">
+                        <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                      </button>
+                    </div>
+                  </div>
+    
+                  <div class="menu__list-link-wrap">
+                    <a class="menu__list-link" data-modal="modal-two" href="#">Акции</a>
+                  </div>
+                  <div class="modal" id="modal-two">
+                    <div class="modal-bg modal-exit"></div>
+                    <div class="modal-container">
+                      <div class="modal-text">
+                        Приносим свои извинения, но такой страницы пока нет :(
+                      </div>
+                      <button class="modal-close modal-exit">
+                        <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li class="menu__list-item">
                 <a class="menu__list-link" href="#">Главная</a>
               </li>
               <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Блог</a>
-              </li>
-              <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Отзывы</a>
-              </li>
-              <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Подарочные наборы</a>
-              </li>
-              <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Акции</a>
+                <a class="menu__list-link" data-modal="modal-three" href="#">Блог</a>
+                <div class="modal" id="modal-three">
+                  <div class="modal-bg modal-exit"></div>
+                  <div class="modal-container">
+                    <div class="modal-text">
+                      Приносим свои извинения, но такой страницы пока нет :(
+                    </div>
+                    <button class="modal-close modal-exit">
+                      <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                    </button>
+                  </div>
+                </div>
               </li>
               <li class="menu__list-item">
                 <a class="menu__list-link" href="#">Контакты</a>
-              </li>
-              <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Доставка</a>
               </li>
             </ul>
           </nav>
@@ -48,6 +81,9 @@
             8 (800)
             <span>500 20-40</span>
           </a>
+          <button class="header__btn">
+            <span class="header__btn-line"></span>
+          </button>
         </div>
       </div>
     </header>
@@ -63,13 +99,10 @@
                 <a class="breadcrumbs__list-link" href="#">Каталог</a>
               </li>
               <li class="breadcrumbs__list-item">
-                <a class="breadcrumbs__list-link" href="#">Вина</a>
+                <a class="breadcrumbs__list-link" href="#">Игристое вино</a>
               </li>
               <li class="breadcrumbs__list-item">
-                <a class="breadcrumbs__list-link" href="#">Тихие вина</a>
-              </li>
-              <li class="breadcrumbs__list-item">
-                <a class="breadcrumbs__list-link" href="#">Вино Cortesia</a>
+                <span class="breadcrumbs__list-link">Prosecco Terre di Sant'Alberto</span>
               </li>
             </ul>
             <button class="filter-btn">Фильтр</button>
@@ -217,7 +250,7 @@
                     <img class="catalogue-item__img" src="images/product/1.png" alt="catalogue img">
                   </a>
                   <a class="catalogue-item__title-link" href="#">
-                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                    <h4 class="catalogue-item__title">Игристое вино Prosecco Terre di Sant'Alberto</h4>
                   </a>
                   <div class="catalogue-item__info">
                     <span class="catalogue-item__info-name">Полусухое</span>
@@ -234,7 +267,7 @@
                     <img class="catalogue-item__img" src="images/product/2.png" alt="catalogue img">
                   </a>
                   <a class="catalogue-item__title-link" href="#">
-                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                    <h4 class="catalogue-item__title">Вино Gewurztraminer Jules Geyl</h4>
                   </a>
                   <div class="catalogue-item__info">
                     <span class="catalogue-item__info-name">Полусухое</span>
@@ -251,7 +284,7 @@
                     <img class="catalogue-item__img" src="images/product/3.png" alt="catalogue img">
                   </a>
                   <a class="catalogue-item__title-link" href="#">
-                    <h4 class="catalogue-item__title">CORTESIA Красное</h4>
+                    <h4 class="catalogue-item__title">Вино Chianti Riserva</h4>
                   </a>
                   <div class="catalogue-item__info">
                     <span class="catalogue-item__info-name">Полусухое</span>
@@ -841,7 +874,7 @@
           <div class="footer__top-inner">
             <h3 class="title footer__title">Карта сайта</h3>
             <div class="footer__content">
-              <nav class="menu">
+              <nav class="menu menu-footer">
                 <ul class="menu__list">
                   <li class="menu__list-item">
                     <a class="menu__list-link" href="#">Каталог</a>
@@ -850,22 +883,49 @@
                     <a class="menu__list-link" href="#">Главная</a>
                   </li>
                   <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Блог</a>
+                    <a class="menu__list-link" data-modal="modal-four" href="#">Блог</a>
+                    <div class="modal" id="modal-four">
+                      <div class="modal-bg modal-exit"></div>
+                      <div class="modal-container">
+                        <div class="modal-text">
+                          Приносим свои извинения, но такой страницы пока нет :(
+                        </div>
+                        <button class="modal-close modal-exit">
+                          <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                        </button>
+                      </div>
+                    </div>
                   </li>
                   <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Отзывы</a>
+                    <a class="menu__list-link" data-modal="modal-five" href="#">Подарочные наборы</a>
+                    <div class="modal" id="modal-five">
+                      <div class="modal-bg modal-exit"></div>
+                      <div class="modal-container">
+                        <div class="modal-text">
+                          Приносим свои извинения, но такой страницы пока нет :(
+                        </div>
+                        <button class="modal-close modal-exit">
+                          <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                        </button>
+                      </div>
+                    </div>
                   </li>
                   <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Подарочные наборы</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Акции</a>
+                    <a class="menu__list-link" data-modal="modal-six" href="#">Акции</a>
+                    <div class="modal" id="modal-six">
+                      <div class="modal-bg modal-exit"></div>
+                      <div class="modal-container">
+                        <div class="modal-text">
+                          Приносим свои извинения, но такой страницы пока нет :(
+                        </div>
+                        <button class="modal-close modal-exit">
+                          <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                        </button>
+                      </div>
+                    </div>
                   </li>
                   <li class="menu__list-item">
                     <a class="menu__list-link" href="#">Контакты</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Доставка</a>
                   </li>
                 </ul>
               </nav>
@@ -886,11 +946,16 @@
               style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
-        <div class="footer__copy">
-          © 2021 ОАО «Wine time»
-          УНП 190130976
-          <span>Лицензия № 33540/75, выдана 17 апреля 2004 года Государственным комитетом по стандартизации Российской
-            Федерации.</span>
+        <div class="footer__bottom">
+          <div class="footer__text">
+            Изображения и текст взяты с сайта <a class="footer__text-link" href="https://simplewine.ru/">simplewine.ru</a>
+          </div>
+          <div class="footer__copy">
+            © 2021 ОАО «Wine time»
+            УНП 190130976
+            <span>Лицензия № 33540/75, выдана 17 апреля 2004 года Государственным комитетом по стандартизации Российской
+              Федерации.</span>
+          </div>
         </div>
       </div>
     </footer>

@@ -33,27 +33,34 @@
     }
   }
   .catalogue{
-    position: relative;
     &__inner{
       display: block;
     }
     &__filters{
-      display: none;
-      position: absolute;
-      background-color: $bg;
-      z-index: 10;
+      position: relative;
+      z-index: 2;
       width: 100%;
+      margin-right: 0;
+      display: none;
+      background-color: $bg;
+    }
+    &__content{
+      width: auto;
+    }
+    &__items{
+      grid-gap: 50px;
     }
   }
   .filter-btn{
-    z-index: 11;
-    display: block;
+    z-index: 6;
     position: relative;
+    display: block;
     padding: 0;
     background-color: transparent;
     border: none;
-    padding-right: 48px;
-    &.filter__btn--open{
+    line-height: 40px;
+    padding-right: 42px;
+    &.filter-btn--open{
       &::after{
         transform: rotate(90deg);
       }
@@ -61,7 +68,7 @@
     &::after{
       content: '';
       position: absolute;
-      top: -3px;
+      top: 0;
       right: 0;
       width: 40px;
       height: 40px;
@@ -83,6 +90,11 @@
   .footer{
     .menu{
       margin-right: 42px;
+    }
+  }
+  .catalogue{
+    &__items{
+      grid-gap: 50px 0;
     }
   }
 }
@@ -115,6 +127,13 @@
     }
     &__img{
       width: 100%;
+    }
+  }
+  .catalogue{
+    &__items{
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px 0;
+      justify-items: center;
     }
   }
 }
@@ -208,6 +227,8 @@
     }
   }
   .slick-arrow{
+    z-index: 100;
+    position: absolute;
     width: 50px;
     height: 50px;
     border: none;
@@ -215,9 +236,7 @@
     background-color: transparent;
     cursor: pointer;
     outline: none;
-    position: absolute;
     top: 36%;
-    z-index: 100;
     &.slick-disabled{
       display: none !important;
     }
@@ -228,9 +247,20 @@
   .slick-next{
     right: 17px;
   }
+  .breadcrumbs{
+    &__inner{
+      display: block;
+    }
+    &__list{
+      margin-bottom: 5px;
+    }
+  }
+  .breadcrumbs{
+    padding-bottom: 40px;
+  }
 }
 
-@media(max-width: 620px){
+@media(max-width: 640px){
   .header{
     background-position: -200px top;
     &__title{
@@ -269,7 +299,7 @@
     padding-top: 80px;
   }
   .discount{
-    padding: 60px 0;
+    padding: 30px 0;
   }
   .about{
     .slick-arrow{
@@ -313,6 +343,23 @@
       max-height: 290px;
     }
   }
+  .catalogue{
+    &__items{
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+    }
+  }
+  .catalogue-item{
+    margin: 0 auto;
+    padding: 15px;
+    &__title{
+      font-size: 22px;
+      line-height: 25px;
+    }
+    &__img{
+      height: 270px;
+    }
+  }
 }
 
 @media(max-width: 500px){
@@ -324,7 +371,7 @@
     &__btn{
       display: inline-block;
       position: relative;
-      z-index: 11;
+      z-index: 6;
       padding: 0;
       border: none;
       background-color: transparent;
@@ -377,9 +424,10 @@
   .logo{
     margin: 0;
     position: relative;
-    z-index: 11;
+    z-index: 6;
   }
   .menu-header{
+    z-index: 5;
     top: 35px;
     left: 0;
     right: 0;
@@ -514,11 +562,6 @@
     }
     &__link{
       padding: 12px 50px;
-    }
-  }
-  .catalogue-item{
-    &__link::after{
-      right: -40px;
     }
   }
 }

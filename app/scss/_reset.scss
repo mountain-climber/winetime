@@ -2,35 +2,20 @@ html{
   box-sizing: border-box;
 }
 
-*,
-*::after,
-*::before{
+*, *::after, *::before{
   box-sizing: inherit;
 }
 
-ul[class],
-ol[class]{
+ul[class], ol[class]{
   padding: 0;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd{
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd{
   margin: 0;
-  // font-size: inherit;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font: inherit;
 }
 
 ul[class]{
@@ -42,10 +27,7 @@ img{
   display: block;
 }
 
-input,
-button,
-textarea,
-select{
+input, button, textarea, select{
   font: inherit;
   color: inherit;
 }
@@ -53,8 +35,7 @@ select{
 a{
   text-decoration: none;
   color: inherit;
-  font-family: inherit;
-  font-size: inherit;
+  font: inherit;
 }
 
 button{
