@@ -76,6 +76,11 @@
       transition: all .4s;
     }
   }
+  .product{
+    &__inner{
+      justify-content: space-between;
+    }
+  }
 }
 
 @media (max-width: 1100px){
@@ -85,6 +90,12 @@
     iframe{
       width: 500px;
       height: 330px;
+    }
+  }
+  .map-contact{
+    height: 250px;
+    iframe{
+      height: 250px;
     }
   }
   .footer{
@@ -134,6 +145,27 @@
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 30px 0;
       justify-items: center;
+    }
+  }
+  .catalogue-item{
+    &__img{
+      height: 250px;
+    }
+  }
+  .product{
+    &__img{
+      max-height: 550px;
+    }
+    &__info-text{
+      max-width: 194px;
+    }
+  }
+  .contact{
+    &__form-box{
+      display: block;
+    }
+    &__form-input{
+      width: 100%;
     }
   }
 }
@@ -258,6 +290,30 @@
   .breadcrumbs{
     padding-bottom: 40px;
   }
+  .product{
+    padding: 0;
+    &__inner{
+      display: block;
+    }
+    &__img{
+      max-height: 400px;
+      margin: 0 auto;
+      margin-bottom: 25px;
+    }
+    &__info-item{
+      line-height: 30px;
+    }
+    &__info-title{
+      max-width: 120px;
+      margin-right: 25px;
+    }
+  }
+  .contact{
+    &__form{
+      box-shadow: none;
+      padding: 0;
+    }
+  }
 }
 
 @media(max-width: 640px){
@@ -351,13 +407,10 @@
   }
   .catalogue-item{
     margin: 0 auto;
-    padding: 15px;
+    padding: 20px;
     &__title{
       font-size: 22px;
       line-height: 25px;
-    }
-    &__img{
-      height: 270px;
     }
   }
 }
@@ -540,6 +593,53 @@
       margin-left: 0;
     }
   }
+  .catalogue-item{
+    &__img{
+      height: 200px;
+    }
+  }
+  .product{
+    &__img{
+      max-height: 300px;
+    }
+    &__descr{
+      margin-bottom: 15px;
+    }
+    &__info-text{
+      max-width: 140px;
+    }
+    &__info{
+      margin-bottom: 10px;
+    }
+    &__price{
+      font-size: 36px;
+      line-height: 67px;
+      margin-bottom: 10px;
+    }
+    &__form-btn{
+      width: 170px;
+      height: 60px;
+      font-size: 18px;
+    }
+  }
+  .star{
+    margin: 15px 0;
+  }
+  .jq-number{
+    margin-bottom: 10px;
+    &::before,
+    &::after{
+      height: 30px;
+    }
+  }
+  .jq-number__field{
+    width: 170px;
+    height: 60px;
+  }
+  .jq-number__field input{
+    font-size: 30px;
+    line-height: 55px;
+  }
 }
 
 @media (max-width: 375px){
@@ -562,6 +662,12 @@
     }
     &__link{
       padding: 12px 50px;
+    }
+  }
+  .product{
+    &__info-item{
+      line-height: 26px;
+      margin-bottom: 5px;
     }
   }
 }
