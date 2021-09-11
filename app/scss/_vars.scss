@@ -38,6 +38,13 @@ $catalogue: #0054ff;
   // box-shadow: 0px 5px 30px #fff;
 }
 
+@function max($numbers...) {
+ @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+ @return m#{i}n(#{$numbers});
+}
+
 
 
 

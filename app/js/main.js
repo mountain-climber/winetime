@@ -1,5 +1,9 @@
 $(function () {
 
+  $('.product__img-box').zoom({
+    url: '../images/product/17.png',
+  });
+
   $('.filter-btn').on('click', function () {
     $('.catalogue__filters').slideToggle();
     $(this).toggleClass('filter-btn--open');
