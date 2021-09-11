@@ -52,7 +52,7 @@
     }
   }
   .filter-btn{
-    z-index: 6;
+    z-index: 3;
     position: relative;
     display: block;
     padding: 0;
@@ -153,9 +153,6 @@
     }
   }
   .product{
-    &__img{
-      max-height: 550px;
-    }
     &__info-text{
       max-width: 194px;
     }
@@ -504,7 +501,7 @@
     &__list-link--catalogue{
       padding-right: 24px;
     }
-    &__list-link-box{
+    &__list-link-box--index{
       background-color: $bg;
     }
     &__list-link-wrap--disabled{

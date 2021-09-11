@@ -13,19 +13,22 @@
     <header class="header">
       <div class="container">
         <div class="header__top">
-          <a class="logo" href="#">
+          <a class="logo" href="index.html">
             <img class="logo__img" src="images/logo.svg" alt="logo">
           </a>
           <nav class="menu menu-header">
             <ul class="menu__list">
               <li class="menu__list-item">
-                <a class="menu__list-link menu__list-link--catalogue" href="#">Каталог</a>
+                <a class="menu__list-link menu__list-link--catalogue" href="catalogue.html">Каталог</a>
                 <div class="menu__list-link-box">
                   <div class="menu__list-link-wrap menu__list-link-wrap--disabled">
                     <a class="menu__list-link" href="catalogue.html">Каталог</a>
                   </div>
                   <div class="menu__list-link-wrap">
                     <a class="menu__list-link" data-modal="modal-one" href="#">Подарочные наборы</a>
+                  </div>
+                  <div class="menu__list-link-wrap">
+                    <a class="menu__list-link" data-modal="modal-two" href="#">Акции</a>
                   </div>
                   <div class="modal" id="modal-one">
                     <div class="modal-bg modal-exit"></div>
@@ -37,10 +40,6 @@
                         <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
                       </button>
                     </div>
-                  </div>
-
-                  <div class="menu__list-link-wrap">
-                    <a class="menu__list-link" data-modal="modal-two" href="#">Акции</a>
                   </div>
                   <div class="modal" id="modal-two">
                     <div class="modal-bg modal-exit"></div>
@@ -56,7 +55,7 @@
                 </div>
               </li>
               <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Главная</a>
+                <a class="menu__list-link" href="index.html">Главная</a>
               </li>
               <li class="menu__list-item">
                 <a class="menu__list-link" data-modal="modal-three" href="#">Блог</a>
@@ -136,10 +135,10 @@
               <nav class="menu menu-footer">
                 <ul class="menu__list">
                   <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Каталог</a>
+                    <a class="menu__list-link" href="catalogue.html">Каталог</a>
                   </li>
                   <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Главная</a>
+                    <a class="menu__list-link" href="index.html">Главная</a>
                   </li>
                   <li class="menu__list-item">
                     <a class="menu__list-link" data-modal="modal-four" href="#">Блог</a>
@@ -199,11 +198,15 @@
               </div>
             </div>
           </div>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1943.7089172825356!2d37.57629609241196!3d55.74687294068405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bb7006bbfe9%3A0xa86f3a55ea0100db!2z0KHQvNC-0LvQtdC90YHQutCw0Y8g0L3QsNCxLiwgMiwg0JzQvtGB0LrQstCwLCAxMjEwOTk!5e0!3m2!1sru!2sru!4v1631297767558!5m2!1sru!2sru"
+              style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
         </div>
         <div class="footer__bottom">
           <div class="footer__text">
-            Изображения и текст взяты с сайта <a class="footer__text-link"
-              href="https://simplewine.ru/">simplewine.ru</a>
+            Изображения и текст взяты с сайта <a class="footer__text-link" href="https://simplewine.ru/">simplewine.ru</a>
           </div>
           <div class="footer__copy">
             © 2021 ОАО «Wine time»
