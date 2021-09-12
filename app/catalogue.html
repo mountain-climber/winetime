@@ -246,7 +246,11 @@
               <div class="catalogue__items">
                 <div class="catalogue-item">
                   <a class="catalogue-item__link" href="1.html">
-                    <img class="catalogue-item__img" src="images/product/1.png" alt="catalogue img">
+                    <picture>
+                      <source type="image/webp" srcset="images/product/1.webp 2x, images/product/1.webp 1x">
+                      <source type="image/png" srcset="images/product/1.png 2x, images/product/1.png 1x">
+                      <img class="catalogue-item__img" src="images/product/1.png" alt="catalogue img">
+                    </picture>
                   </a>
                   <a class="catalogue-item__title-link" href="1.html">
                     <h4 class="catalogue-item__title">Игристое вино Prosecco Terre di Sant'Alberto</h4>
