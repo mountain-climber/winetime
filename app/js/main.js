@@ -1,7 +1,39 @@
 $(function () {
-  
-  $('.product__img-box').zoom({
-    target: '.img-zoom-result'
+
+  $('.product__img')
+    .wrap('<div class="product__img-wrap"></div>')
+    .css('display', 'block')
+    .parent()
+    .zoom({
+      target: '.img-zoom-result'
+    });
+
+  $('.header__btn').on('click', function () {
+    $('.menu-header').toggleClass('menu-header--open');
+    $(this).toggleClass('header__btn--open');
+  });
+
+  $('.jq-number__spin.plus').on('click', function () {
+    var num = $('input.product__form-num').attr('value');
+    var nums = Number(num);
+    var numses = nums + 1;
+    $('input.product__form-num').attr('value', numses);
+    if (numses > 9) {
+      $('.jq-number__field').addClass('jq-number__field--two-digit');
+    }
+  });
+  $('.jq-number__spin.minus').on('click', function () {
+    var num = $('input.product__form-num').attr('value');
+    var nums = Number(num);
+    var numses = nums - 1;
+    $('input.product__form-num').attr('value', numses);
+    if (numses < 10) {
+      $('.jq-number__field').removeClass('jq-number__field--two-digit');
+      if (numses < 2) {
+        var min = $('input.product__form-num').attr('min');
+        var num = $('input.product__form-num').attr('value', min);
+      }
+    }
   });
 
 
@@ -118,6 +150,20 @@ $(function () {
 
   var next = '<button type="button" class="slick-next"><svg width="50px" height="50px" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.833 35.4167L31.2497 25.0001L20.833 14.5833" stroke="#EABC78" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>';
 
+  if ($(window).width() < 993){
+    document.querySelector('.product__img').removeEventListener('mouseover', hoverzoom, false);
+    document.querySelector('.product__img').removeEventListener('mouseout', unhoverzoom, false);
+
+    $('.product__img').on('click', function () {
+      $('.img-zoom-result').toggleClass('img-zoom-result--active');
+    });
+
+    $('.img-zoom-result').on('click', function () {
+      $('.img-zoom-result').toggleClass('img-zoom-result--active');
+    });
+    
+  }
+
   if ($(window).width() < 769){
     $('.popular__items, .discount__items').slick({
       prevArrow: prev,
@@ -150,33 +196,7 @@ $(function () {
     });
   }
 
-  $('.header__btn').on('click', function () {
-    $('.menu-header').toggleClass('menu-header--open');
-    $(this).toggleClass('header__btn--open');
-  });
-
-  $('.jq-number__spin.plus').on('click', function () {
-    var num = $('input.product__form-num').attr('value');
-    var nums = Number(num);
-    var numses = nums + 1;
-    $('input.product__form-num').attr('value', numses);
-    if (numses > 9) {
-      $('.jq-number__field').addClass('jq-number__field--two-digit');
-    }
-  });
-  $('.jq-number__spin.minus').on('click', function () {
-    var num = $('input.product__form-num').attr('value');
-    var nums = Number(num);
-    var numses = nums - 1;
-    $('input.product__form-num').attr('value', numses);
-    if (numses < 10) {
-      $('.jq-number__field').removeClass('jq-number__field--two-digit');
-      if (numses < 2) {
-        var min = $('input.product__form-num').attr('min');
-        var num = $('input.product__form-num').attr('value', min);
-      }
-    }
-  });
+  
 
 
   // begin of timer
