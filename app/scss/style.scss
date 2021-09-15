@@ -348,10 +348,10 @@
   }
   &__img{
     max-width: 289px;
-    max-height: 400px;
+    height: 400px;
     object-fit: cover;
   }
-  &__clock-wrapper{
+  &__holder{
     max-width: 530px;
     width: 100%;
     margin-left: 70px;
@@ -390,17 +390,31 @@
   &__price-new{
     color: $accent;
   }
-  &__clock-title{
+  &__mini-title{
     font-size: 30px;
     line-height: 55px;
     margin-bottom: 30px;
     @extend %roboto-400;
   }
-  &__clock{
-    display: flex;
-    margin-bottom: 45px;
+  &__link{
+    border-bottom: 1px solid #FCEDD6;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: -3px;
+      right: -40px;
+      background-image: url('../images/icons/angle-right40.svg');
+    }
   }
-  &__clock-item{
+}
+
+.promo-clock {
+  display: flex;
+  margin-bottom: 45px;
+  &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -408,11 +422,11 @@
     margin-right: 50px;
     position: relative;
     &::after{
-      content: '';
+      content: "";
       position: absolute;
       width: 1px;
       height: 88px;
-      background-color: rgba(#EDD3AE, .38);
+      background-color: rgba(#edd3ae, 0.38);
       top: 28px;
       right: 0;
     }
@@ -432,19 +446,6 @@
     font-size: 30px;
     line-height: 44px;
     color: $accent;
-  }
-  &__link{
-    border-bottom: 1px solid #FCEDD6;
-    position: relative;
-    &::after{
-      content: '';
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      top: -3px;
-      right: -40px;
-      background-image: url('../images/icons/angle-right40.svg');
-    }
   }
 }
 
@@ -581,7 +582,7 @@
     margin-bottom: 20px;
   }
   &__img{
-    height: 320px;
+    // height: 320px;
     object-fit: cover;
   }
   &__title-link{
@@ -944,10 +945,6 @@
 .jq-number__field{ 
   width: 200px;
   height: 70px;
-  transition: all .4s;
-  &.jq-number__field--two-digit{
-    width: 220px;
-  }
 }
 
 .jq-number__field input{

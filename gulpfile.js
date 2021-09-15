@@ -49,6 +49,8 @@ function scripts(){
     'node_modules/rateyo/src/jquery.rateyo.js',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
     'node_modules/jquery-zoom/jquery.zoom.js',
+    'node_modules/lozad/dist/lozad.js',
+    'app/js/timer.min.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
