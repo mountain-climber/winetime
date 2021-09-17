@@ -1,4 +1,4 @@
- $(function () {
+$(function () {
 
   var href = $('.zoomImg').attr('src');
 
@@ -76,11 +76,7 @@
     starSvg: '<svg width="30px" height="30px" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 1.61804L17.8922 10.5193L18.0044 10.8647H18.3677H27.727L20.1552 16.366L19.8613 16.5795L19.9735 16.925L22.8657 25.8262L15.2939 20.325L15 20.1115L14.7061 20.325L7.13428 25.8262L10.0265 16.925L10.1387 16.5795L9.84482 16.366L2.27299 10.8647H11.6323H11.9956L12.1078 10.5193L15 1.61804Z" stroke="#EABC78"/></svg>'
   });
 
-  if ($(window).width() > 991){
-    document.querySelector('.img-zoom-result').classList.add('zoomin');
-  }
-
-  if ($(window).width() > 499){
+  if ($(window).width() > 499) {
     function hoverlink() {
       document.querySelector('.menu__list-link--catalogue').classList.add('menu__list-link--catalogue-open');
       document.querySelector('.menu__list-link-box').classList.add('menu__list-link-box--open');
@@ -99,12 +95,12 @@
       document.querySelector('.menu__list-link-box').classList.add('menu__list-link-box--open');
       document.querySelector('.menu__list-link--catalogue').classList.add('menu__list-link--catalogue-open');
     }
-    
+
     function unhoverbox() {
       document.querySelector('.menu__list-link-box').classList.remove('menu__list-link-box--open');
       document.querySelector('.menu__list-link--catalogue').classList.remove('menu__list-link--catalogue-open');
     }
-    
+
     document.querySelector('.menu__list-link-box').addEventListener('mouseover', hoverbox, false);
     document.querySelector('.menu__list-link-box').addEventListener('mouseout', unhoverbox, false);
   }
@@ -113,7 +109,7 @@
 
   var next = '<button type="button" class="slick-next"><svg width="50px" height="50px" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.833 35.4167L31.2497 25.0001L20.833 14.5833" stroke="#EABC78" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>';
 
-  if ($(window).width() < 993){
+  if ($(window).width() < 993) {
     $('.product__img-wrap').trigger('zoom.destroy');
     $('.product__img-wrap').attr('href', href);
     $('.product__img-wrap').attr('data-fancybox', '');
@@ -139,11 +135,58 @@
 
   if ($(window).width() < 501) {
     document.querySelector('.menu__list-link--catalogue').removeAttribute('href');
-    
+
     $('.menu__list-link--catalogue').on('click', function () {
       $(this).toggleClass('menu__list-link--catalogue-open');
       $('.menu__list-link-box').toggleClass('menu__list-link-box--open');
     });
   }
-  
+
+    var lazyloadImages;
+
+    if ("IntersectionObserver" in window) {
+      lazyloadImages = document.querySelectorAll(".lazy");
+      var imageObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var image = entry.target;
+            image.classList.remove("lazy");
+            imageObserver.unobserve(image);
+          }
+        });
+      });
+
+      lazyloadImages.forEach(function (image) {
+        imageObserver.observe(image);
+      });
+    } else {
+      var lazyloadThrottleTimeout;
+      lazyloadImages = document.querySelectorAll(".lazy");
+
+      function lazyload() {
+        if (lazyloadThrottleTimeout) {
+          clearTimeout(lazyloadThrottleTimeout);
+        }
+
+        lazyloadThrottleTimeout = setTimeout(function () {
+          var scrollTop = window.pageYOffset;
+          lazyloadImages.forEach(function (img) {
+            if (img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+          });
+          if (lazyloadImages.length == 0) {
+            document.removeEventListener("scroll", lazyload);
+            window.removeEventListener("resize", lazyload);
+            window.removeEventListener("orientationChange", lazyload);
+          }
+        }, 20);
+      }
+
+      document.addEventListener("scroll", lazyload);
+      window.addEventListener("resize", lazyload);
+      window.addEventListener("orientationChange", lazyload);
+    }
+
 });

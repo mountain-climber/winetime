@@ -582,8 +582,13 @@
     margin-bottom: 20px;
   }
   &__img{
-    // height: 320px;
+    height: 320px;
     object-fit: cover;
+    transition: filter 0.3s;
+    &.lazyload{
+      width: 100%;
+      filter: blur(8px);
+    }
   }
   &__title-link{
     margin-bottom: 7px;
