@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Вино Selection des Chateaux de Bordeaux Rouge</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -14,7 +14,7 @@
       <div class="container">
         <div class="header__top">
           <a class="logo" href="index.html">
-            <img class="logo__img" src="images/logo.svg" alt="logo">
+            <img class="logo__img" src="images/logo.svg" alt="Логотип">
           </a>
           <nav class="menu menu-header">
             <ul class="menu__list">
@@ -38,7 +38,7 @@
                         Приносим свои извинения, но такой страницы пока нет :(
                       </div>
                       <button class="modal-close modal-exit">
-                        <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                        <img class="modal-close__img" src="images/icons/close.svg" alt="Закрыть">
                       </button>
                     </div>
                   </div>
@@ -49,7 +49,7 @@
                         Приносим свои извинения, но такой страницы пока нет :(
                       </div>
                       <button class="modal-close modal-exit">
-                        <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                        <img class="modal-close__img" src="images/icons/close.svg" alt="Закрыть">
                       </button>
                     </div>
                   </div>
@@ -67,7 +67,7 @@
                       Приносим свои извинения, но такой страницы пока нет :(
                     </div>
                     <button class="modal-close modal-exit">
-                      <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                      <img class="modal-close__img" src="images/icons/close.svg" alt="Закрыть">
                     </button>
                   </div>
                 </div>
@@ -99,10 +99,10 @@
                 <a class="breadcrumbs__list-link" href="catalogue.html">Каталог</a>
               </li>
               <li class="breadcrumbs__list-item">
-                <a class="breadcrumbs__list-link" href="#">Игристое вино</a>
+                <a class="breadcrumbs__list-link" href="#">Вино</a>
               </li>
               <li class="breadcrumbs__list-item">
-                <span class="breadcrumbs__list-link">Prosecco Terre di Sant'Alberto</span>
+                <span class="breadcrumbs__list-link">Selection des Chateaux de Bordeaux Rouge</span>
               </li>
             </ul>
           </div>
@@ -111,7 +111,13 @@
       <section class="product">
         <div class="container">
           <div class="product__inner">
-            <img class="product__img" src="images/product/19.png" alt="product img">
+            <picture class="product__img-box">
+              <source type="image/webp" srcset="images/product-big/19.webp 2x, images/product-big/19.webp 1x">
+              <source type="image/png" srcset="images/product-big/19.png 2x, images/product-big/19.png 1x">
+              <img class="product__img" src="images/product-big/19.png" alt="Вино Selection des Chateaux de Bordeaux Rouge">
+            </picture>
+            <div class="img-zoom-result">
+            </div>
             <div class="product__content">
               <h3 class="title product__title">
                 Вино Selection des Chateaux de Bordeaux Rouge
@@ -190,7 +196,7 @@
                           Приносим свои извинения, но такой страницы пока нет :(
                         </div>
                         <button class="modal-close modal-exit">
-                          <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                          <img class="modal-close__img" src="images/icons/close.svg" alt="Закрыть">
                         </button>
                       </div>
                     </div>
@@ -204,7 +210,7 @@
                           Приносим свои извинения, но такой страницы пока нет :(
                         </div>
                         <button class="modal-close modal-exit">
-                          <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                          <img class="modal-close__img" src="images/icons/close.svg" alt="Закрыть">
                         </button>
                       </div>
                     </div>
@@ -218,7 +224,7 @@
                           Приносим свои извинения, но такой страницы пока нет :(
                         </div>
                         <button class="modal-close modal-exit">
-                          <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                          <img class="modal-close__img" src="images/icons/close.svg" alt="Закрыть">
                         </button>
                       </div>
                     </div>
@@ -262,6 +268,7 @@
 
 
 
+  <script src="js/zoom.min.js" defer></script>
   <script src="js/main.min.js"></script>
 </body>
 

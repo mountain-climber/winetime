@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Игристое вино Prosecco Rose</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -14,7 +14,7 @@
       <div class="container">
         <div class="header__top">
           <a class="logo" href="index.html">
-            <img class="logo__img" src="images/logo.svg" alt="logo">
+            <img class="logo__img" src="images/logo.svg" alt="Логотип">
           </a>
           <nav class="menu menu-header">
             <ul class="menu__list">
@@ -38,7 +38,7 @@
                         Приносим свои извинения, но такой страницы пока нет :(
                       </div>
                       <button class="modal-close modal-exit">
-                        <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                        <img class="modal-close__img" src="images/icons/close.svg" alt="Закрыть">
                       </button>
                     </div>
                   </div>
@@ -49,7 +49,7 @@
                         Приносим свои извинения, но такой страницы пока нет :(
                       </div>
                       <button class="modal-close modal-exit">
-                        <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                        <img class="modal-close__img" src="images/icons/close.svg" alt="Закрыть">
                       </button>
                     </div>
                   </div>
@@ -67,7 +67,7 @@
                       Приносим свои извинения, но такой страницы пока нет :(
                     </div>
                     <button class="modal-close modal-exit">
-                      <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                      <img class="modal-close__img" src="images/icons/close.svg" alt="Закрыть">
                     </button>
                   </div>
                 </div>
@@ -102,7 +102,7 @@
                 <a class="breadcrumbs__list-link" href="#">Игристое вино</a>
               </li>
               <li class="breadcrumbs__list-item">
-                <span class="breadcrumbs__list-link">Prosecco Terre di Sant'Alberto</span>
+                <span class="breadcrumbs__list-link">Prosecco Rose</span>
               </li>
             </ul>
           </div>
@@ -111,15 +111,23 @@
       <section class="product">
         <div class="container">
           <div class="product__inner">
-            <img class="product__img" src="images/product/8.png" alt="product img">
+            <picture class="product__img-box">
+              <source type="image/webp" srcset="images/product-big/8.webp 2x, images/product-big/8.webp 1x">
+              <source type="image/png" srcset="images/product-big/8.png 2x, images/product-big/8.png 1x">
+              <img class="product__img" src="images/product-big/8.png" alt="Игристое вино Prosecco Rose>
+            </picture>
+            <div class="img-zoom-result">
+            </div>
             <div class="product__content">
               <h3 class="title product__title">
                 Игристое вино Prosecco Rose
               </h3>
               <div class="star" data-rateyo-rating="4.7"></div>
               <p class="product__descr">
-                Блестящее вино нежно розового оттенка с красивой игрой мелких пузырьков. Элегантный букет раскрывается ароматами красных
-                ягод, лепестка розы, цитрусовых и миндаля. Освежающее, гармоничное и яркое во вкусе, с деликатной кислотностью,
+                Блестящее вино нежно розового оттенка с красивой игрой мелких пузырьков. Элегантный букет раскрывается
+                ароматами красных
+                ягод, лепестка розы, цитрусовых и миндаля. Освежающее, гармоничное и яркое во вкусе, с деликатной
+                кислотностью,
                 шелковистой текстурой и минерально-ягодными оттенками в послевкусии.
               </p>
               <ul class="product__info">
@@ -191,7 +199,7 @@
                           Приносим свои извинения, но такой страницы пока нет :(
                         </div>
                         <button class="modal-close modal-exit">
-                          <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                          <img class="modal-close__img" src="images/icons/close.svg" alt="Закрыть">
                         </button>
                       </div>
                     </div>
@@ -205,7 +213,7 @@
                           Приносим свои извинения, но такой страницы пока нет :(
                         </div>
                         <button class="modal-close modal-exit">
-                          <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                          <img class="modal-close__img" src="images/icons/close.svg" alt="Закрыть">
                         </button>
                       </div>
                     </div>
@@ -219,7 +227,7 @@
                           Приносим свои извинения, но такой страницы пока нет :(
                         </div>
                         <button class="modal-close modal-exit">
-                          <img class="modal-close__img" src="images/icons/close.svg" alt="close icon">
+                          <img class="modal-close__img" src="images/icons/close.svg" alt="Закрыть">
                         </button>
                       </div>
                     </div>
@@ -248,7 +256,8 @@
         </div>
         <div class="footer__bottom">
           <div class="footer__text">
-            Изображения и текст взяты с сайта <a class="footer__text-link" href="https://simplewine.ru/">simplewine.ru</a>
+            Изображения и текст взяты с сайта <a class="footer__text-link"
+              href="https://simplewine.ru/">simplewine.ru</a>
           </div>
           <div class="footer__copy">
             © 2021 ОАО «Wine time»
@@ -263,6 +272,7 @@
 
 
 
+  <script src="js/zoom.min.js" defer></script>
   <script src="js/main.min.js"></script>
 </body>
 

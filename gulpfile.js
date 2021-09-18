@@ -49,7 +49,7 @@ function scripts(){
     'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
     'node_modules/jquery-zoom/jquery.zoom.js',
     'node_modules/lazyestload/src/js/lazyload.js',
-    'app/js/timer.min.js',
+    'node_modules/timer/timer.min.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
