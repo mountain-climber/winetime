@@ -440,13 +440,12 @@
       background-color: transparent;
       width: 37px;
       height: 21px;
-      overflow: hidden;
       span{
         display: block;
         width: 37px;
         height: 3px;
         background-color: $accent;
-        transition: all .3s;
+        transition: all .5s;
         transform: translateY(0);
       }
       &::before,
@@ -468,15 +467,19 @@
     }
     &__btn--open{
       span{
+        width: 30px;
         opacity: 0;
         transform: translateY(-100px);
+        transform: rotate(135deg);
       }
       &::before{
-        transform: rotate(45deg);
+        width: 30px;
+        transform: rotate(135deg);
         top: 9px;
       }
       &::after{
-        transform: rotate(-45deg);
+        width: 30px;
+        transform: rotate(-135deg);
         bottom: 9px;
       }
     }
