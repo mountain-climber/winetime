@@ -414,7 +414,7 @@
   }
 }
 
-.promo-clock {
+.countdown {
   display: flex;
   margin-bottom: 45px;
   &__item {
@@ -589,7 +589,6 @@
     object-fit: cover;
     transition: filter 0.3s;
     &.lazyload{
-      width: 100%;
       filter: blur(8px);
     }
   }

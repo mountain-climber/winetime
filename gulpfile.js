@@ -49,8 +49,8 @@ function scripts() {
     'node_modules/jquery-zoom/jquery.zoom.js',
     'node_modules/rateyo/src/jquery.rateyo.js',
     'node_modules/slick-carousel/slick/slick.js',
-    'node_modules/lazyestload/src/js/lazyload.js',
-    'app/js/timer.js',
+    'node_modules/countdown-lite/countdown-lite-hours.js',
+    'lazyestload/src/js/lazyload.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))

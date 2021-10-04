@@ -1,5 +1,5 @@
 $(function () {
-
+  
   var href = $('.zoomImg').attr('src');
 
   var scrollX = window.innerWidth - document.body.clientWidth;
@@ -147,4 +147,6 @@ $(function () {
     });
   }
 
+  var countdown = countdownLite();
+  
 });
