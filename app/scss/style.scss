@@ -433,7 +433,11 @@
       top: 28px;
       right: 0;
     }
+    &:nth-child(2){
+      margin-right: 40px;
+    }
     &:last-child{
+      width: 125px;
       padding-right: 0;
       margin-right: 0;
       &::after{

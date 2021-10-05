@@ -58,6 +58,7 @@
     padding: 0;
     background-color: transparent;
     border: none;
+    outline: none;
     line-height: 40px;
     padding-right: 42px;
     &.filter-btn--open{
@@ -359,6 +360,9 @@
     &__item{
       padding-right: 40px;
       margin-right: 40px;
+      &:nth-child(2){
+        margin-right: 30px;
+      }
     }
   }
   .popular{
@@ -440,6 +444,7 @@
       background-color: transparent;
       width: 37px;
       height: 21px;
+      outline: none;
       span{
         display: block;
         width: 37px;
@@ -576,6 +581,9 @@
     &__item{
       padding-right: 17px;
       margin-right: 17px;
+      &:nth-child(2){
+        margin-right: 13px;
+      }
       &:last-child{
         width: 82px;
       }
